@@ -19,7 +19,7 @@ applications:
     workers:
       queue:
         commands:
-          start: craft queue/listen --verbose
+          start: php craft queue/listen --verbose
     relationships:
       postgresql:
     mounts:
