@@ -16,6 +16,10 @@ applications:
         - pdo_pgsql
         - zip
         - dom
+    workers:
+      queue:
+        commands:
+          start: craft queue/listen --verbose
     relationships:
       postgresql:
     mounts:
