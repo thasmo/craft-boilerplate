@@ -1,0 +1,22 @@
+dateModified: 1757022105
+email:
+  fromEmail: craft@thasmo.email
+  fromName: 'Craft CMS Boilerplate'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    adb5e530-ffff-4083-9892-15e3ec956d04: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
+    b9bd3f0f-5c83-472d-b52d-108f378986fd: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
+system:
+  edition: solo
+  live: true
+  name: 'Craft CMS Boilerplate'
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

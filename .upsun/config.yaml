@@ -1,0 +1,29 @@
+applications:
+  panel:
+    source:
+      root: "/"
+    type: "php:8.4"
+    relationships:
+      postgresql:
+    mounts:
+      storage:
+        source: "instance"
+        source_path: "storage"
+      web/assets/:
+        source: "instance"
+        source_path: "assets"
+
+    web:
+      locations:
+        "/":
+          root: "web"
+          passthru: "/index.php"
+
+services:
+  postgresql:
+    type: postgresql:17
+
+routes:
+  "https://panel.{default}/":
+    type: upstream
+    upstream: "panel:http"
