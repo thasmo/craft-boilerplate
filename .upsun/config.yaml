@@ -3,6 +3,19 @@ applications:
     source:
       root: "/"
     type: "php:8.4"
+    runtime:
+      extensions:
+        - bcmath
+        - ctype
+        - curl
+        - imagick
+        - iconv
+        - intl
+        - mbstring
+        - pdo
+        - pdo_pgsql
+        - zip
+        - dom
     relationships:
       postgresql:
     mounts:
