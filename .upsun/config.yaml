@@ -32,7 +32,7 @@ applications:
     hooks:
       deploy: |
         set -xe
-        php craft clear-caches/all
+        php craft clear-caches/all --interactive=0
         php craft up --interactive=0 --no-backup=1
         php craft db/repair --interactive=0
       post_deploy:
