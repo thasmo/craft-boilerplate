@@ -7,6 +7,7 @@ use craft\base\Event;
 use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterCpNavItemsEvent;
 use craft\services\Dashboard;
+use craft\services\Utilities;
 use craft\web\twig\variables\Cp;
 
 class Module extends \yii\base\Module
@@ -22,7 +23,8 @@ class Module extends \yii\base\Module
 		}
 
 		if (!Craft::$app->config->general->allowUpdates) {
-			$this->unregisterCraftUpdatesWidget();
+			$this->unregisterUpdateUtility();
+			$this->unregisterUpdateWidget();
 		}
 	}
 
@@ -45,7 +47,26 @@ class Module extends \yii\base\Module
 		);
 	}
 
-	private function unregisterCraftUpdatesWidget(): void
+	private function unregisterUpdateUtility(): void
+	{
+		Event::on(
+			Utilities::class,
+			Utilities::EVENT_REGISTER_UTILITIES,
+			function (RegisterComponentTypesEvent $event) {
+				$index = array_search(
+					'craft\utilities\Updates',
+					$event->types,
+					true
+				);
+
+				if ($index !== false) {
+					unset($event->types[$index]);
+				}
+			}
+		);
+	}
+
+	private function unregisterUpdateWidget(): void
 	{
 		Event::on(
 			Dashboard::class,
