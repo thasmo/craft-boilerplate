@@ -1,8 +1,8 @@
 applications:
   panel:
+    type: "php:8.4"
     source:
       root: "/"
-    type: "php:8.4"
     runtime:
       extensions:
         - bcmath
@@ -29,7 +29,15 @@ applications:
       web/assets/:
         source: "instance"
         source_path: "assets"
-
+    hooks:
+      deploy: |
+        set -xe
+        php craft clear-caches/all
+        php craft up --interactive=0 --no-backup=1
+        php craft db/repair --interactive=0
+      post_deploy:
+        set -xe
+        php craft gc/run --interactive=0
     web:
       locations:
         "/":
