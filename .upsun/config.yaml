@@ -35,7 +35,7 @@ applications:
         php craft clear-caches/all --interactive=0
         php craft up --interactive=0 --no-backup=1
         php craft db/repair --interactive=0
-      post_deploy:
+      post_deploy: |
         set -xe
         php craft gc/run --interactive=0
     web:
