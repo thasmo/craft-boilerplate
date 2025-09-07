@@ -1,6 +1,7 @@
 applications:
   panel:
     type: "php:8.4"
+    container_profile: BALANCED
     source:
       root: "/"
     runtime:
@@ -18,6 +19,7 @@ applications:
         - dom
     workers:
       queue:
+        container_profile: HIGH_CPU
         commands:
           start: php craft queue/listen --verbose
     relationships:
@@ -47,6 +49,7 @@ applications:
 services:
   postgresql:
     type: postgresql:17
+    container_profile: HIGH_MEMORY
 
 routes:
   "https://panel.{default}/":
