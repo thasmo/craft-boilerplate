@@ -10,4 +10,9 @@ return [
 	'bootstrap' => [
 		'site',
 	],
+	'components' => [
+		'deprecator' => [
+			'throwExceptions' => App::parseBooleanEnv('$CRAFT_DEV_MODE') ?? false,
+		],
+	],
 ];
