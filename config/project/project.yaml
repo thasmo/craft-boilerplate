@@ -1,4 +1,4 @@
-dateModified: 1757022105
+dateModified: 1757444798
 email:
   fromEmail: craft@thasmo.email
   fromName: 'Craft CMS Boilerplate'
@@ -9,10 +9,11 @@ meta:
     b9bd3f0f-5c83-472d-b52d-108f378986fd: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
 system:
   edition: solo
-  live: true
+  live: $CRAFT_IS_SYSTEM_LIVE
   name: 'Craft CMS Boilerplate'
+  retryDuration: null
   schemaVersion: 5.8.0.3
-  timeZone: America/Los_Angeles
+  timeZone: $CRAFT_TIMEZONE
 users:
   allowPublicRegistration: false
   defaultGroup: null
