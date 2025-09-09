@@ -21,6 +21,20 @@ return [
 				'database' => 0,
 			],
 		],
+		'session' => function() {
+			$config = craft\helpers\App::sessionConfig();
+
+			$config['class'] = yii\redis\Session::class;
+
+			$config['redis'] = [
+				'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
+				'port' => App::env('REDIS_PORT') ?: 6379,
+				'password' => App::env('REDIS_PASSWORD') ?: null,
+				'database' => 1,
+			];
+
+			return Craft::createObject($config);
+		},
 		'queue' => [
 			'proxyQueue' => [
 				'class' => yii\queue\redis\Queue::class,
@@ -28,7 +42,7 @@ return [
 					'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
 					'port' => App::env('REDIS_PORT') ?: 6379,
 					'password' => App::env('REDIS_PASSWORD') ?: null,
-					'database' => 1,
+					'database' => 2,
 				],
 			],
 			'channel' => 'queue',
