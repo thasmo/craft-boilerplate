@@ -17,6 +17,7 @@ applications:
         - pdo_pgsql
         - zip
         - dom
+        - redis
     workers:
       queue:
         container_profile: HIGH_CPU
@@ -24,6 +25,7 @@ applications:
           start: php craft queue/listen --verbose
     relationships:
       postgresql:
+      redis:
     mounts:
       storage:
         source: "instance"
@@ -50,6 +52,9 @@ services:
   postgresql:
     type: postgresql:17
     container_profile: HIGH_MEMORY
+  redis:
+    type: redis-persistent:8.0
+    container_profile: BALANCED
 
 routes:
   "https://panel.{default}/":
