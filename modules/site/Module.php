@@ -1,6 +1,6 @@
 <?php
 
-namespace Site;
+namespace modules\site;
 
 use Craft;
 use craft\base\Event;
@@ -14,6 +14,16 @@ class Module extends \yii\base\Module
 {
 	public function init(): void
 	{
+		Craft::setAlias('@modules/site', __DIR__);
+
+		if (Craft::$app->request->isConsoleRequest) {
+			$this->controllerNamespace = 'modules\\site\\console\\controllers';
+		} else {
+			$this->controllerNamespace = 'modules\\site\\controllers';
+		}
+
+		parent::init();
+
 		if (Craft::$app->config->general->devMode) {
 			return;
 		}

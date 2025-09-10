@@ -1,11 +1,12 @@
 <?php
 
 use craft\helpers\App;
+use modules\site\Module;
 
 return [
 	'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
 	'modules' => [
-		'site' => Site\Module::class,
+		'site' => modules\site\Module::class,
 	],
 	'bootstrap' => [
 		'site',
