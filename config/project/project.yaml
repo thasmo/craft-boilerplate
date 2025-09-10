@@ -9,11 +9,9 @@ meta:
     b9bd3f0f-5c83-472d-b52d-108f378986fd: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
 system:
   edition: solo
-  live: $CRAFT_IS_SYSTEM_LIVE
   name: 'Craft CMS Boilerplate'
   retryDuration: null
   schemaVersion: 5.8.0.3
-  timeZone: $CRAFT_TIMEZONE
 users:
   allowPublicRegistration: false
   defaultGroup: null
