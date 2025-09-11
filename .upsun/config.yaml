@@ -50,6 +50,12 @@ applications:
         "/":
           root: "web"
           passthru: "/index.php"
+    crons:
+      garbage:
+        spec: 0 3 * * *
+        commands:
+          start: |
+            php craft gc/run --interactive=0
 
 services:
   postgresql:
