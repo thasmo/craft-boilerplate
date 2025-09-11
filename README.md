@@ -2,6 +2,11 @@
 
 ## Setup
 
+**prepare configuration**
+```bash
+cp .env.example .env
+```
+
 **start containers**
 ```bash
 ddev start

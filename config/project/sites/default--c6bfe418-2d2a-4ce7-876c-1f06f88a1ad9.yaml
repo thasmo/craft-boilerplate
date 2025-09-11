@@ -1,0 +1,9 @@
+baseUrl: $DEFAULT_SITE_URL
+enabled: true
+handle: default
+hasUrls: true
+language: $DEFAULT_SITE_LANGUAGE
+name: $DEFAULT_SITE_NAME
+primary: true
+siteGroup: 74f78f86-64ac-4d6c-aeef-f4b85077ed91 # $APP_SYSTEM_NAME
+sortOrder: 1

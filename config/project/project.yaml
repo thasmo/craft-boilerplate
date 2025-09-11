@@ -1,17 +1,31 @@
-dateModified: 1757444798
+dateModified: 1757570944
 email:
   fromEmail: craft@thasmo.email
-  fromName: 'Craft CMS Boilerplate'
+  fromName: $APP_SYSTEM_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: '/usr/local/bin/mailpit sendmail -t --smtp-addr 127.0.0.1:1025'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  storage:
+    hasUrls: true
+    name: Storage
+    settings:
+      path: $APP_FILES_PATH
+    type: craft\fs\Local
+    url: $APP_FILES_URL
 meta:
   __names__:
-    adb5e530-ffff-4083-9892-15e3ec956d04: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
-    b9bd3f0f-5c83-472d-b52d-108f378986fd: 'Craft CMS Boilerplate' # Craft CMS Boilerplate
+    74f78f86-64ac-4d6c-aeef-f4b85077ed91: $APP_SYSTEM_NAME # $APP_SYSTEM_NAME
+    c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: $DEFAULT_SITE_NAME # $DEFAULT_SITE_NAME
 system:
   edition: solo
-  name: 'Craft CMS Boilerplate'
+  live: true
+  name: $APP_SYSTEM_NAME
   retryDuration: null
   schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
   defaultGroup: null

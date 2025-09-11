@@ -33,6 +33,9 @@ applications:
       web/assets/:
         source: "instance"
         source_path: "assets"
+      web/files/:
+        source: "instance"
+        source_path: "files"
     hooks:
       deploy: |
         set -xe

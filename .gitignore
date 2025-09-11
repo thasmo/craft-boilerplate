@@ -2,5 +2,6 @@
 /vendor/
 /storage/
 /web/assets/
+/web/files/
 
 /config/license.*
