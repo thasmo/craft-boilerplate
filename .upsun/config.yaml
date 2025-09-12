@@ -49,7 +49,7 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: true
+          passthru: "/panel.php"
           scripts: false
           allow: false
           index:
@@ -101,7 +101,7 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: true
+          passthru: "/index.php"
           scripts: false
           allow: false
           index:
