@@ -49,9 +49,11 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: "/panel.php"
+          passthru: true
           scripts: false
           allow: false
+          index:
+            - panel.php
     crons:
       garbage:
         spec: 0 3 * * *
@@ -97,9 +99,11 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: "/index.php"
+          passthru: true
           scripts: false
           allow: false
+          index:
+            - index.php
 
 services:
   postgresql:
