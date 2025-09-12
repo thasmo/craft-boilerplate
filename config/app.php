@@ -12,6 +12,11 @@ return [
 		'site',
 	],
 	'components' => [
+		'projectConfig' => function() {
+			$config = craft\helpers\App::projectConfigConfig();
+			$config['writeYamlAutomatically'] = App::env('CRAFT_ALLOW_ADMIN_CHANGES');
+			return Craft::createObject($config);
+		},
 		'cache' => [
 			'class' => yii\redis\Cache::class,
 			'defaultDuration' => Craft::$app->config->general->cacheDuration,
