@@ -55,7 +55,7 @@ applications:
           index:
             - panel.php
         "/cpresources":
-          root: "web"
+          root: "web/cpresources/"
           passthru: "/panel.php"
           scripts: true
           allow: true
