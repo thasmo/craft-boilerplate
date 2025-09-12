@@ -28,13 +28,13 @@ applications:
       redis:
     mounts:
       storage:
-        source: "instance"
+        source: "storage"
         source_path: "storage"
       web/assets/:
-        source: "instance"
+        source: "storage"
         source_path: "assets"
       web/files/:
-        source: "instance"
+        source: "storage"
         source_path: "files"
     hooks:
       deploy: |
@@ -49,13 +49,53 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: "/index.php"
+          passthru: "/panel.php"
     crons:
       garbage:
         spec: 0 3 * * *
         commands:
           start: |
             php craft gc/run --interactive=0
+  site:
+    type: "php:8.4"
+    container_profile: BALANCED
+    source:
+      root: "/"
+    runtime:
+      extensions:
+        - bcmath
+        - ctype
+        - curl
+        - imagick
+        - iconv
+        - intl
+        - mbstring
+        - pdo
+        - pdo_pgsql
+        - zip
+        - dom
+        - redis
+    relationships:
+      postgresql:
+      redis:
+    mounts:
+      storage:
+        source: "storage"
+        source_path: "storage"
+        service: "panel"
+      web/assets/:
+        source: "storage"
+        source_path: "assets"
+        service: "panel"
+      web/files/:
+        source: "storage"
+        source_path: "files"
+        service: "panel"
+    web:
+      locations:
+        "/":
+          root: "web"
+          passthru: "/index.php"
 
 services:
   postgresql:
@@ -66,6 +106,9 @@ services:
     container_profile: BALANCED
 
 routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "site:http"
   "https://panel.{default}/":
     type: upstream
     upstream: "panel:http"
