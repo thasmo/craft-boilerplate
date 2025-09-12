@@ -62,6 +62,8 @@ applications:
             php craft gc/run --interactive=0
   site:
     type: "php:8.4"
+    build:
+      flavor: none
     container_profile: BALANCED
     source:
       root: "/"
