@@ -50,7 +50,7 @@ applications:
         "/":
           root: "web"
           passthru: "/panel.php"
-          scripts: false
+          scripts: true
           allow: false
           index:
             - panel.php
@@ -100,7 +100,7 @@ applications:
         "/":
           root: "web"
           passthru: "/index.php"
-          scripts: false
+          scripts: true
           allow: false
           index:
             - index.php
