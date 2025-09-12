@@ -92,6 +92,10 @@ applications:
         source: "storage"
         source_path: "storage"
         service: "panel"
+      web/cpresources/:
+        source: "storage"
+        source_path: "cpresources"
+        service: "panel"
       web/files/:
         source: "storage"
         source_path: "files"
