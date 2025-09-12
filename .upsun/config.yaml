@@ -54,6 +54,11 @@ applications:
           allow: false
           index:
             - panel.php
+        "/cpresources":
+          root: "web"
+          passthru: "/panel.php"
+          scripts: true
+          allow: true
     crons:
       garbage:
         spec: 0 3 * * *
