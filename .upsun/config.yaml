@@ -30,9 +30,9 @@ applications:
       storage:
         source: "storage"
         source_path: "storage"
-      web/assets/:
+      web/cpresources/:
         source: "storage"
-        source_path: "assets"
+        source_path: "cpresources"
       web/files/:
         source: "storage"
         source_path: "files"
@@ -86,10 +86,6 @@ applications:
       storage:
         source: "storage"
         source_path: "storage"
-        service: "panel"
-      web/assets/:
-        source: "storage"
-        source_path: "assets"
         service: "panel"
       web/files/:
         source: "storage"
