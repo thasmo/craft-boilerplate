@@ -50,6 +50,8 @@ applications:
         "/":
           root: "web"
           passthru: "/panel.php"
+          scripts: false
+          allow: false
     crons:
       garbage:
         spec: 0 3 * * *
@@ -96,6 +98,8 @@ applications:
         "/":
           root: "web"
           passthru: "/index.php"
+          scripts: false
+          allow: false
 
 services:
   postgresql:
