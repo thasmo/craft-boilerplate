@@ -1,7 +1,7 @@
 applications:
   panel:
     type: "php:8.4"
-    container_profile: BALANCED
+    container_profile: HIGH_CPU
     source:
       root: "/"
     runtime:
@@ -70,7 +70,7 @@ applications:
             php craft gc/run --interactive=0
   site:
     type: "php:8.4"
-    container_profile: BALANCED
+    container_profile: HIGH_CPU
     source:
       root: "/"
     runtime:
