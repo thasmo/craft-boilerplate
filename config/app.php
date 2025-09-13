@@ -14,7 +14,7 @@ return [
 	'components' => [
 		'projectConfig' => function() {
 			$config = craft\helpers\App::projectConfigConfig();
-			$config['writeYamlAutomatically'] = App::env('CRAFT_ALLOW_ADMIN_CHANGES');
+			$config['writeYamlAutomatically'] = Craft::$app->config->general->allowAdminChanges;
 			return Craft::createObject($config);
 		},
 		'cache' => [
@@ -54,7 +54,7 @@ return [
 			'channel' => 'queue',
 		],
 		'deprecator' => [
-			'throwExceptions' => App::parseBooleanEnv('$CRAFT_DEV_MODE') ?? false,
+			'throwExceptions' => Craft::$app->config->general->devMode,
 		],
 	],
 ];
