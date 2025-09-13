@@ -5,6 +5,9 @@ applications:
     source:
       root: "/"
     runtime:
+      sizing_hints:
+        request_memory: 16
+        reserved_memory: 80
       extensions:
         - bcmath
         - ctype
