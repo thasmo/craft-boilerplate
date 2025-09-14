@@ -1,10 +1,13 @@
 applications:
   panel:
     type: "php:8.4"
-    container_profile: BALANCED
+    container_profile: HIGH_CPU
     source:
       root: "/"
     runtime:
+      sizing_hints:
+        request_memory: 16
+        reserved_memory: 80
       extensions:
         - bcmath
         - ctype
@@ -28,13 +31,13 @@ applications:
       redis:
     mounts:
       storage:
-        source: "instance"
+        source: "storage"
         source_path: "storage"
-      web/assets/:
-        source: "instance"
-        source_path: "assets"
+      web/cpresources/:
+        source: "storage"
+        source_path: "cpresources"
       web/files/:
-        source: "instance"
+        source: "storage"
         source_path: "files"
     hooks:
       deploy: |
@@ -49,13 +52,66 @@ applications:
       locations:
         "/":
           root: "web"
-          passthru: "/index.php"
+          passthru: "/panel.php"
+          scripts: true
+          allow: false
+          index:
+            - panel.php
+        "/cpresources":
+          root: "web/cpresources/"
+          passthru: "/panel.php"
+          scripts: true
+          allow: true
     crons:
       garbage:
         spec: 0 3 * * *
         commands:
           start: |
             php craft gc/run --interactive=0
+  site:
+    type: "php:8.4"
+    container_profile: HIGH_CPU
+    source:
+      root: "/"
+    runtime:
+      extensions:
+        - bcmath
+        - ctype
+        - curl
+        - imagick
+        - iconv
+        - intl
+        - mbstring
+        - pdo
+        - pdo_pgsql
+        - zip
+        - dom
+        - redis
+    relationships:
+      postgresql:
+      redis:
+    mounts:
+      storage:
+        source: "storage"
+        source_path: "storage"
+        service: "panel"
+      web/cpresources/:
+        source: "storage"
+        source_path: "cpresources"
+        service: "panel"
+      web/files/:
+        source: "storage"
+        source_path: "files"
+        service: "panel"
+    web:
+      locations:
+        "/":
+          root: "web"
+          passthru: "/index.php"
+          scripts: true
+          allow: false
+          index:
+            - index.php
 
 services:
   postgresql:
@@ -66,6 +122,9 @@ services:
     container_profile: BALANCED
 
 routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "site:http"
   "https://panel.{default}/":
     type: upstream
     upstream: "panel:http"

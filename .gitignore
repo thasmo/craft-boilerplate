@@ -1,7 +1,7 @@
 /.env
 /vendor/
 /storage/
-/web/assets/
+/web/cpresources/
 /web/files/
 
 /config/license.*

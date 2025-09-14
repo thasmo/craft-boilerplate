@@ -12,16 +12,23 @@ return [
 		'site',
 	],
 	'components' => [
-		'cache' => [
-			'class' => yii\redis\Cache::class,
-			'defaultDuration' => Craft::$app->config->general->cacheDuration,
-			'redis' => [
-				'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
-				'port' => App::env('REDIS_PORT') ?: 6379,
-				'password' => App::env('REDIS_PASSWORD') ?: null,
-				'database' => 0,
-			],
-		],
+		'projectConfig' => function() {
+			$config = craft\helpers\App::projectConfigConfig();
+			$config['writeYamlAutomatically'] = Craft::$app->config->general->allowAdminChanges;
+			return Craft::createObject($config);
+		},
+		'cache' => function() {
+			return Craft::createObject([
+				'class' => yii\redis\Cache::class,
+				'defaultDuration' => Craft::$app->config->general->cacheDuration,
+				'redis' => [
+					'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
+					'port' => App::env('REDIS_PORT') ?: 6379,
+					'password' => App::env('REDIS_PASSWORD') ?: null,
+					'database' => 0,
+				],
+			]);
+		},
 		'session' => function() {
 			$config = craft\helpers\App::sessionConfig();
 
@@ -36,20 +43,26 @@ return [
 
 			return Craft::createObject($config);
 		},
-		'queue' => [
-			'proxyQueue' => [
-				'class' => yii\queue\redis\Queue::class,
-				'redis' => [
-					'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
-					'port' => App::env('REDIS_PORT') ?: 6379,
-					'password' => App::env('REDIS_PASSWORD') ?: null,
-					'database' => 2,
+		'queue' => function() {
+			return Craft::createObject( [
+				'class' => craft\queue\Queue::class,
+				'proxyQueue' => [
+					'class' => yii\queue\redis\Queue::class,
+					'redis' => [
+						'hostname' => App::env('REDIS_HOSTNAME') ?: 'localhost',
+						'port' => App::env('REDIS_PORT') ?: 6379,
+						'password' => App::env('REDIS_PASSWORD') ?: null,
+						'database' => 2,
+					],
 				],
-			],
-			'channel' => 'queue',
-		],
-		'deprecator' => [
-			'throwExceptions' => App::parseBooleanEnv('$CRAFT_DEV_MODE') ?? false,
-		],
+				'channel' => 'queue',
+			]);
+		},
+		'deprecator' => function() {
+			return Craft::createObject([
+				'class' => craft\services\Deprecator::class,
+				'throwExceptions' => Craft::$app->config->general->devMode,
+			]);
+		},
 	],
 ];
