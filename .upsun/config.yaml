@@ -21,6 +21,8 @@ applications:
         - zip
         - dom
         - redis
+      disabled_extensions:
+        - blackfire
     workers:
       queue:
         container_profile: HIGH_CPU
