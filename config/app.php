@@ -12,12 +12,12 @@ return [
 		'site',
 	],
 	'components' => [
-		'projectConfig' => function() {
+		'projectConfig' => function () {
 			$config = craft\helpers\App::projectConfigConfig();
 			$config['writeYamlAutomatically'] = Craft::$app->config->general->allowAdminChanges;
 			return Craft::createObject($config);
 		},
-		'cache' => function() {
+		'cache' => function () {
 			return Craft::createObject([
 				'class' => yii\redis\Cache::class,
 				'defaultDuration' => Craft::$app->config->general->cacheDuration,
@@ -29,7 +29,7 @@ return [
 				],
 			]);
 		},
-		'session' => function() {
+		'session' => function () {
 			$config = craft\helpers\App::sessionConfig();
 
 			$config['class'] = yii\redis\Session::class;
@@ -43,8 +43,8 @@ return [
 
 			return Craft::createObject($config);
 		},
-		'queue' => function() {
-			return Craft::createObject( [
+		'queue' => function () {
+			return Craft::createObject([
 				'class' => craft\queue\Queue::class,
 				'proxyQueue' => [
 					'class' => yii\queue\redis\Queue::class,
@@ -58,7 +58,7 @@ return [
 				'channel' => 'queue',
 			]);
 		},
-		'deprecator' => function() {
+		'deprecator' => function () {
 			return Craft::createObject([
 				'class' => craft\services\Deprecator::class,
 				'throwExceptions' => Craft::$app->config->general->devMode,
