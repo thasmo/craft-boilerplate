@@ -1,7 +1,12 @@
-/.env
 /vendor/
 /storage/
 /web/cpresources/
 /web/files/
-
 /config/license.*
+
+/.nuxt/
+/.output/
+/node_modules/
+/app/.types/
+
+.env

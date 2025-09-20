@@ -1,0 +1,63 @@
+{
+	"type": "module",
+	"private": true,
+	"packageManager": "pnpm@10.17.0",
+	"engines": {
+		"node": ">=22",
+		"pnpm": ">=10"
+	},
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"prepare": "concurrently --group --prefix-colors 'auto' 'pnpm:prepare:*'",
+		"prepare:husky": "husky",
+		"prepare:nuxt": "nuxt prepare",
+		"prepare:types": "dotenvx run -- graphql-codegen",
+		"lint": "concurrently --group --prefix-colors 'auto' 'pnpm:lint:*'",
+		"lint:eslint": "eslint .",
+		"lint:cspell": "cspell --no-progress --no-summary --no-must-find-files .",
+		"lint:knip": "knip --no-progress",
+		"fix": "concurrently --group --prefix-colors 'auto' 'pnpm:fix:*'",
+		"fix:eslint": "eslint --fix .",
+		"fix:knip": "knip --fix --no-progress --workspace ."
+	},
+	"dependencies": {
+		"@iconify-json/ri": "^1.2.5",
+		"@unocss/nuxt": "^66.0.0",
+		"@unocss/reset": "^66.0.0",
+		"nuxt": "^4.0.0",
+		"unocss": "^66.0.0",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.3.0",
+		"@graphql-codegen/cli": "6.0.0",
+		"@graphql-codegen/client-preset": "5.0.1",
+		"@graphql-codegen/introspection": "5.0.0",
+		"@nuxt/eslint": "^1.6.0",
+		"@nuxtjs/apollo": "5.0.0-alpha.15",
+		"@somehow-digital/commitlint-config": "^1.0.0",
+		"@somehow-digital/cspell-dictionary": "^2.0.0",
+		"@somehow-digital/eslint-config": "^4.0.0",
+		"@somehow-digital/typescript-config": "^3.0.0",
+		"@somehow-digital/unocss-preset": "^2.0.0",
+		"@types/node": "^22.8.7",
+		"concurrently": "^9.0.0",
+		"cspell": "^9.0.0",
+		"eslint": "^9.1.1",
+		"husky": "^9.0.11",
+		"knip": "^5.11.0",
+		"lint-staged": "^16.0.0",
+		"typescript": "^5.4.5"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@parcel/watcher",
+			"esbuild",
+			"oxc-resolver"
+		]
+	}
+}
