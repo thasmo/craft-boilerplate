@@ -8,6 +8,7 @@
     },
     "require-dev": {
         "craftcms/generator": "^2.0.0",
+        "phpstan/phpstan": "^2.1",
         "symplify/easy-coding-standard": "^12.6",
         "yiisoft/yii2-shell": "^2.0.3"
     },
@@ -23,9 +24,13 @@
         }
     },
     "scripts": {
-        "lint": "vendor/bin/ecs check --ansi",
-        "fix": "vendor/bin/ecs check --ansi --fix"
-    },
+		"analyze": "phpstan analyse",
+		"lint": "vendor/bin/ecs check --ansi",
+		"fix": "vendor/bin/ecs check --ansi --fix",
+		"post-install-cmd": [
+			"composer audit"
+		]
+	},
     "autoload": {
         "psr-4": {
             "modules\\site\\": "modules/site/"

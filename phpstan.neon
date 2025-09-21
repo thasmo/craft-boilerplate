@@ -1,0 +1,22 @@
+parameters:
+	level: 5
+	paths:
+		- config
+		- modules
+		- web
+	scanFiles:
+		- bootstrap.php
+		- vendor/craftcms/cms/src/Craft.php
+		- vendor/yiisoft/yii2/Yii.php
+		- vendor/twig/twig/src/Extension/CoreExtension.php
+	stubFiles:
+		- stubs/BaseYii.stub
+		- stubs/console/Application.stub
+		- stubs/web/Application.stub
+	earlyTerminatingMethodCalls:
+		Craft:
+			- dd
+		yii\base\Application:
+			- end
+		yii\base\ErrorHandler:
+			- convertExceptionToError
