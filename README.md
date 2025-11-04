@@ -36,7 +36,7 @@ ddev launch
 
 ## Development
 
-**Run queue**
+**Observe logs**
 ```bash
-ddev craft queue/listen --verbose
+ddev logs --follow
 ```

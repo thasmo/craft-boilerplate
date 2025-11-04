@@ -15,43 +15,12 @@ composer_version: "2"
 web_environment:
   - PLATFORM_PROJECT=j2vk64j2tkan4
   - PLATFORM_ENVIRONMENT=main
-corepack_enable: false
-
-# Key features of DDEV's config.yaml:
-
-# name: <projectname> # Name of the project, automatically provides
-#   http://projectname.ddev.site and https://projectname.ddev.site
-# If the name is omitted, the project will take the name of the enclosing directory,
-# which is useful if you want to have a copy of the project side by side with this one.
-
-# type: <projecttype>  # backdrop, cakephp, craftcms, drupal, drupal6, drupal7, drupal8, drupal9, drupal10, drupal11, generic, laravel, magento, magento2, php, shopware6, silverstripe, symfony, typo3, wordpress
-# See https://ddev.readthedocs.io/en/stable/users/quickstart/ for more
-# information on the different project types
-
-# docroot: <relative_path> # Relative path to the directory containing index.php.
-
-# php_version: "8.3"  # PHP version to use, "5.6" through "8.4"
-
-# You can explicitly specify the webimage but this
-# is not recommended, as the images are often closely tied to DDEV's' behavior,
-# so this can break upgrades.
+web_extra_daemons:
+  - name: "queue"
+    command: 'craft queue/listen --verbose=1 --interactive=0'
+    directory: /var/www/html
 
 # webimage: <docker_image>  # nginx/php docker image.
-
-# database:
-#   type: <dbtype> # mysql, mariadb, postgres
-#   version: <version> # database version, like "10.11" or "8.0"
-#   MariaDB versions can be 5.5-10.8, 10.11, 11.4, 11.8
-#   MySQL versions can be 5.5-8.0, 8.4
-#   PostgreSQL versions can be 9-17
-
-# router_http_port: <port>  # Port to be used for http (defaults to global configuration, usually 80)
-# router_https_port: <port> # Port for https (defaults to global configuration, usually 443)
-
-# xdebug_enabled: false  # Set to true to enable Xdebug and "ddev start" or "ddev restart"
-# Note that for most people the commands
-# "ddev xdebug" to enable Xdebug and "ddev xdebug off" to disable it work better,
-# as leaving Xdebug enabled all the time is a big performance hit.
 
 # xhgui_https_port: 8142
 # Can be used to change the router https port for xhgui application
@@ -75,31 +44,10 @@ corepack_enable: false
 # Set to "xhgui" to enable XHGui features
 # "xhgui" will become default in a future major release
 
-# webserver_type: nginx-fpm, apache-fpm, generic
-
-# timezone: Europe/Berlin
-# If timezone is unset, DDEV will attempt to derive it from the host system timezone
-# using the $TZ environment variable or the /etc/localtime symlink.
-# This is the timezone used in the containers and by PHP;
-# it can be set to any valid timezone,
-# see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-# For example Europe/Dublin or MST7MDT
-
 # composer_root: <relative_path>
 # Relative path to the Composer root directory from the project root. This is
 # the directory which contains the composer.json and where all Composer related
 # commands are executed.
-
-# composer_version: "2"
-# You can set it to "" or "2" (default) for Composer v2 or "1" for Composer v1
-# to use the latest major version available at the time your container is built.
-# It is also possible to use each other Composer version channel. This includes:
-#   - 2.2 (latest Composer LTS version)
-#   - stable
-#   - preview
-#   - snapshot
-# Alternatively, an explicit Composer version may be specified, for example "2.2.18".
-# To reinstall Composer after the image was built, run "ddev debug rebuild".
 
 # nodejs_version: "22"
 # change from the default system Node.js version to any other version.
@@ -107,21 +55,6 @@ corepack_enable: false
 # and https://www.npmjs.com/package/n#specifying-nodejs-versions for the full documentation,
 # Note that using of 'ddev nvm' is discouraged because "nodejs_version" is much easier to use,
 # can specify any version, and is more robust than using 'nvm'.
-
-# corepack_enable: false
-# Change to 'true' to 'corepack enable' and gain access to latest versions of yarn/pnpm
-
-# additional_hostnames:
-#  - somename
-#  - someothername
-# would provide http and https URLs for "somename.ddev.site"
-# and "someothername.ddev.site".
-
-# additional_fqdns:
-#  - example.com
-#  - sub1.example.com
-# would provide http and https URLs for "example.com" and "sub1.example.com"
-# Please take care with this because it can cause great confusion.
 
 # upload_dirs: "custom/upload/dir"
 #
@@ -268,14 +201,6 @@ corepack_enable: false
 #    container_port: 3000
 #    http_port: 9998
 #    https_port: 9999
-
-#web_extra_daemons:
-#- name: "http-1"
-#  command: "/var/www/html/node_modules/.bin/http-server -p 3000"
-#  directory: /var/www/html
-#- name: "http-2"
-#  command: "/var/www/html/node_modules/.bin/http-server /var/www/html/sub -p 3000"
-#  directory: /var/www/html
 
 # override_config: false
 # By default, config.*.yaml files are *merged* into the configuration
