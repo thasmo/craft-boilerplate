@@ -19,6 +19,7 @@ web_extra_daemons:
   - name: "queue"
     command: 'craft queue/listen --verbose=1 --interactive=0'
     directory: /var/www/html
+corepack_enable: true
 
 # webimage: <docker_image>  # nginx/php docker image.
 
