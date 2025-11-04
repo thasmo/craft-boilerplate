@@ -20,6 +20,7 @@ web_extra_daemons:
     command: 'craft queue/listen --verbose=1 --interactive=0'
     directory: /var/www/html
 corepack_enable: true
+timezone: Europe/Vienna
 
 # webimage: <docker_image>  # nginx/php docker image.
 
