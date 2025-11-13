@@ -1,11 +1,11 @@
-name: craft-boilerplate
+name: craft
 type: craftcms
 docroot: web
 php_version: "8.4"
 webserver_type: nginx-fpm
 xdebug_enabled: false
 additional_hostnames:
-  - "panel.craft-boilerplate"
+  - "panel.craft"
 additional_fqdns: []
 database:
   type: postgres
@@ -17,7 +17,7 @@ web_environment:
   - PLATFORM_ENVIRONMENT=main
 web_extra_daemons:
   - name: "queue"
-    command: 'craft queue/listen --verbose=1 --interactive=0'
+    command: "craft queue/listen --verbose=1 --interactive=0"
     directory: /var/www/html
 corepack_enable: true
 timezone: Europe/Vienna
