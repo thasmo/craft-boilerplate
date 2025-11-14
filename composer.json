@@ -1,4 +1,12 @@
 {
+	"name": "thasmo/craft-boilerplate",
+	"description": "Craft CMS Boilerplate",
+	"keywords": [
+		"craft",
+		"cms",
+		"project"
+	],
+	"type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
