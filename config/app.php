@@ -4,7 +4,7 @@ use craft\helpers\App;
 use modules\site\Module;
 
 return [
-	'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+	'id' => App::env('CRAFT_APP_ID'),
 	'modules' => [
 		'site' => modules\site\Module::class,
 	],
@@ -14,7 +14,7 @@ return [
 	'components' => [
 		'projectConfig' => function () {
 			$config = craft\helpers\App::projectConfigConfig();
-			$config['writeYamlAutomatically'] = Craft::$app->config->general->allowAdminChanges;
+			$config['writeYamlAutomatically'] = Craft::$app->config->general->devMode;
 			return Craft::createObject($config);
 		},
 		'cache' => function () {
