@@ -1,5 +1,7 @@
 # Craft CMS Boilerplate
 
+> Personal boilerplate for Craft CMS projects.
+
 ## Features
 
 * DDEV Integration for Local Development
