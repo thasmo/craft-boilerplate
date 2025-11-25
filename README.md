@@ -4,7 +4,7 @@
 
 **prepare configuration**
 ```bash
-cp .env.example .env
+cp .env.development .env
 ```
 
 **start containers**
