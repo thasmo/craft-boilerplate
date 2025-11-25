@@ -1,5 +1,18 @@
 # Craft CMS Boilerplate
 
+## Features
+
+* DDEV Integration for Local Development
+* Application Configuration via Environment Variables
+* Separate Host/PHP Setup for Control Panel
+* Easy Coding Standard Integration for Code Style
+* PHPStan Integration for Code Quality
+* Application Cache via Redis
+* Session Storage via Redis
+* Queue Job Storage via Redis
+* Various Control Panel Tweaks
+* Upsun Configuration
+
 ## Setup
 
 **prepare configuration**
