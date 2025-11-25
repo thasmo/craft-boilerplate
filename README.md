@@ -51,6 +51,11 @@ ddev launch
 
 ## Development
 
+**URLs**
+* Frontend: https://craft.ddev.site/
+* Panel: https://panel.craft.ddev.site/
+* Mails: https://craft.ddev.site:8026/
+
 **Observe logs**
 ```bash
 ddev logs --follow
