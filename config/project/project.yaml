@@ -1,4 +1,4 @@
-dateModified: 1757711787
+dateModified: 1764194532
 email:
   fromEmail: craft@thasmo.email
   fromName: $APP_SYSTEM_NAME
@@ -23,6 +23,11 @@ meta:
     74f78f86-64ac-4d6c-aeef-f4b85077ed91: $APP_SYSTEM_NAME # $APP_SYSTEM_NAME
     c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: $DEFAULT_SITE_NAME # $DEFAULT_SITE_NAME
     ed02786e-e6b9-465c-b426-aadc034ea25e: 'Public Schema' # Public Schema
+plugins:
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
