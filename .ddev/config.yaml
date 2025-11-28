@@ -12,6 +12,8 @@ database:
   version: "17"
 use_dns_when_possible: true
 composer_version: "2"
+corepack_enable: true
+timezone: "Europe/Vienna"
 web_environment:
   - PLATFORM_PROJECT=j2vk64j2tkan4
   - PLATFORM_ENVIRONMENT=main
@@ -19,8 +21,11 @@ web_extra_daemons:
   - name: "queue"
     command: "craft queue/listen --verbose=1 --interactive=0"
     directory: /var/www/html
-corepack_enable: true
-timezone: Europe/Vienna
+web_extra_exposed_ports:
+  - name: "vite"
+    container_port: 3000
+    http_port: 3001
+    https_port: 3000
 
 # webimage: <docker_image>  # nginx/php docker image.
 

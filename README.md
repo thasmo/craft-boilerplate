@@ -14,6 +14,7 @@
 * Queue Job Storage via Redis
 * Various Control Panel Tweaks
 * Upsun Configuration
+* Vite Integration for Frontend Development
 
 ## Setup
 
@@ -38,6 +39,11 @@ ddev pnpm install
 ddev craft install
 ```
 
+**build frontend**
+```bash
+ddev pnpm run build
+```
+
 **import data**
 ```bash
 upsun db:dump -o | ddev import-db
@@ -56,7 +62,17 @@ ddev launch
 * Panel: https://panel.craft.ddev.site/
 * Mails: https://craft.ddev.site:8026/
 
-**Observe logs**
+**start server**
+```bash
+ddev pnpm run dev
+```
+
+**build assets**
+```bash
+ddev pnpm run build
+```
+
+**observe logs**
 ```bash
 ddev logs --follow
 ```

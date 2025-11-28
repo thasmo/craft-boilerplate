@@ -1,7 +1,9 @@
 /.env
+/node_modules/
 /vendor/
 /storage/
 /web/cpresources/
 /web/files/
+/web/assets/
 
 /config/license.*
