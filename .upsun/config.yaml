@@ -1,9 +1,9 @@
 applications:
   panel:
-    type: "php:8.4"
+    type: 'php:8.4'
     container_profile: HIGH_CPU
     source:
-      root: "/"
+      root: /
     runtime:
       sizing_hints:
         request_memory: 16
@@ -33,14 +33,14 @@ applications:
       redis:
     mounts:
       storage:
-        source: "storage"
-        source_path: "storage"
+        source: storage
+        source_path: storage
       web/cpresources/:
-        source: "storage"
-        source_path: "cpresources"
+        source: storage
+        source_path: cpresources
       web/files/:
-        source: "storage"
-        source_path: "files"
+        source: storage
+        source_path: files
     hooks:
       deploy: |
         set -xe
@@ -52,16 +52,16 @@ applications:
         php craft gc/run --interactive=0
     web:
       locations:
-        "/":
-          root: "web"
-          passthru: "/panel.php"
+        /:
+          root: web
+          passthru: /panel.php
           scripts: true
           allow: false
           index:
             - panel.php
-        "/cpresources":
-          root: "web/cpresources/"
-          passthru: "/panel.php"
+        /cpresources:
+          root: web/cpresources/
+          passthru: /panel.php
           scripts: true
           allow: true
     crons:
@@ -71,10 +71,10 @@ applications:
           start: |
             php craft gc/run --interactive=0
   site:
-    type: "php:8.4"
+    type: 'php:8.4'
     container_profile: HIGH_CPU
     source:
-      root: "/"
+      root: /
     runtime:
       extensions:
         - bcmath
@@ -94,22 +94,22 @@ applications:
       redis:
     mounts:
       storage:
-        source: "storage"
-        source_path: "storage"
-        service: "panel"
+        source: storage
+        source_path: storage
+        service: panel
       web/cpresources/:
-        source: "storage"
-        source_path: "cpresources"
-        service: "panel"
+        source: storage
+        source_path: cpresources
+        service: panel
       web/files/:
-        source: "storage"
-        source_path: "files"
-        service: "panel"
+        source: storage
+        source_path: files
+        service: panel
     web:
       locations:
-        "/":
-          root: "web"
-          passthru: "/index.php"
+        /:
+          root: web
+          passthru: /index.php
           scripts: true
           allow: false
           index:
@@ -124,9 +124,9 @@ services:
     container_profile: BALANCED
 
 routes:
-  "https://{default}/":
+  'https://{default}/':
     type: upstream
-    upstream: "site:http"
-  "https://panel.{default}/":
+    upstream: 'site:http'
+  'https://panel.{default}/':
     type: upstream
-    upstream: "panel:http"
+    upstream: 'panel:http'

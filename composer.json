@@ -7,32 +7,32 @@
 		"project"
 	],
 	"type": "project",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require": {
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
 		"craftcms/cms": "^5.0.0",
 		"nystudio107/craft-vite": "^5.0",
 		"vlucas/phpdotenv": "^5.4.0",
 		"yiisoft/yii2-redis": "^2.0"
 	},
-    "require-dev": {
-        "craftcms/generator": "^2.0.0",
-        "phpstan/phpstan": "^2.1",
-        "symplify/easy-coding-standard": "^13.0",
-        "yiisoft/yii2-shell": "^2.0.3"
-    },
-    "config": {
-        "allow-plugins": {
-            "craftcms/plugin-installer": true,
-            "yiisoft/yii2-composer": true
-        },
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "platform": {
-            "php": "8.4"
-        }
-    },
-    "scripts": {
+	"require-dev": {
+		"craftcms/generator": "^2.0.0",
+		"phpstan/phpstan": "^2.1",
+		"symplify/easy-coding-standard": "^13.0",
+		"yiisoft/yii2-shell": "^2.0.3"
+	},
+	"config": {
+		"allow-plugins": {
+			"craftcms/plugin-installer": true,
+			"yiisoft/yii2-composer": true
+		},
+		"sort-packages": true,
+		"optimize-autoloader": true,
+		"platform": {
+			"php": "8.4"
+		}
+	},
+	"scripts": {
 		"analyze": "phpstan analyse",
 		"lint": "vendor/bin/ecs check --ansi",
 		"fix": "vendor/bin/ecs check --ansi --fix",
@@ -40,9 +40,9 @@
 			"composer audit"
 		]
 	},
-    "autoload": {
-        "psr-4": {
-            "modules\\site\\": "modules/site/"
-        }
-    }
+	"autoload": {
+		"psr-4": {
+			"modules\\site\\": "modules/site/"
+		}
+	}
 }
