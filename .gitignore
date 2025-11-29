@@ -8,3 +8,5 @@
 /web/assets/
 
 /config/license.*
+
+/.twig-cs-fixer.cache
