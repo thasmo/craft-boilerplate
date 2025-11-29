@@ -19,6 +19,7 @@
 		"craftcms/generator": "^2.0.0",
 		"phpstan/phpstan": "^2.1",
 		"symplify/easy-coding-standard": "^13.0",
+		"vincentlanglet/twig-cs-fixer": "^3.11",
 		"yiisoft/yii2-shell": "^2.0.3"
 	},
 	"config": {
@@ -34,8 +35,10 @@
 	},
 	"scripts": {
 		"analyze": "phpstan analyse",
-		"lint": "vendor/bin/ecs check --ansi",
-		"fix": "vendor/bin/ecs check --ansi --fix",
+		"lint:php": "vendor/bin/ecs check --ansi",
+		"lint:twig": "vendor/bin/twig-cs-fixer lint templates/",
+		"fix:php": "vendor/bin/ecs check --ansi --fix",
+		"fix:twig": "vendor/bin/twig-cs-fixer fix templates/",
 		"post-install-cmd": [
 			"composer audit"
 		]
