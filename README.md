@@ -61,6 +61,7 @@ ddev launch
 * Frontend: https://craft.ddev.site/
 * Panel: https://panel.craft.ddev.site/
 * Mails: https://craft.ddev.site:8026/
+* UnoCSS: https://craft.ddev.site:3000/__unocss/
 
 **start server**
 ```bash

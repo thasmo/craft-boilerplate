@@ -3,6 +3,7 @@
 	"version": "0.0.0",
 	"description": "",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build"
@@ -12,7 +13,10 @@
 	"license": "MIT",
 	"packageManager": "pnpm@10.24.0",
 	"devDependencies": {
-		"vite": "^7.2.4"
+		"@somehow-digital/unocss-preset": "^2.1.0",
+		"unocss": "^66.5.9",
+		"vite": "^7.2.4",
+		"vite-plugin-restart": "^2.0.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
