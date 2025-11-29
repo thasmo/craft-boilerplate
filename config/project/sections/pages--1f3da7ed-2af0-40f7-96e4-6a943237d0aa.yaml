@@ -8,22 +8,15 @@ maxAuthors: 1
 name: Pages
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - refresh
-        - '1'
-      -
-        - urlFormat
-        - '{url}'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: # $DEFAULT_SITE_NAME
     enabledByDefault: true
     hasUrls: true
-    template: pages
+    template: sections/pages.twig
     uriFormat: '{slug}'
 structure:
   maxLevels: null
