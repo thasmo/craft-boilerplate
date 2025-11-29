@@ -1,4 +1,5 @@
 /.env
+/.pnpm-store/
 /node_modules/
 /vendor/
 /storage/

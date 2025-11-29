@@ -1,9 +1,19 @@
 import { defineConfig } from 'vite';
+import unocss from 'unocss/vite';
+import restart from 'vite-plugin-restart';
+
+export const PATHS = {
+	templates: 'templates/**/*.twig',
+}
 
 export default defineConfig({
 	build: {
+		target: 'esnext',
 		manifest: true,
 		outDir: 'web/assets/',
+		modulePreload: {
+			polyfill: false,
+		},
 		rollupOptions: {
 			input: {
 				app: 'assets/main.ts',
@@ -19,4 +29,13 @@ export default defineConfig({
 			origin: /https?:\/\/(.+)?(\.ddev\.site)(?::\d+)?$/,
 		},
 	},
+	plugins: [
+		unocss(),
+		restart({
+			delay: 0,
+			reload: [
+				PATHS.templates,
+			],
+		}),
+	],
 });
