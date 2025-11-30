@@ -1,13 +1,15 @@
+import vue from '@vitejs/plugin-vue';
 import process from 'node:process';
 import unocss from 'unocss/vite';
 import { defineConfig, loadEnv } from 'vite';
 import restart from 'vite-plugin-restart';
+import tools from 'vite-plugin-vue-devtools';
 
 export const PATHS = {
 	templates: 'templates/**/*.twig',
 };
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
 	const environment = loadEnv(mode, process.cwd(), '');
 
 	return {
@@ -15,6 +17,7 @@ export default defineConfig(({ mode }) => {
 			target: 'esnext',
 			manifest: true,
 			outDir: 'web/assets/',
+			sourcemap: command === 'serve',
 			modulePreload: {
 				polyfill: false,
 			},
@@ -35,6 +38,8 @@ export default defineConfig(({ mode }) => {
 		},
 		plugins: [
 			unocss(),
+			vue(),
+			tools(),
 			restart({
 				delay: 0,
 				reload: [
@@ -42,5 +47,10 @@ export default defineConfig(({ mode }) => {
 				],
 			}),
 		],
+		resolve: {
+			alias: {
+				vue: 'vue/dist/vue.esm-bundler.js',
+			},
+		},
 	};
 });

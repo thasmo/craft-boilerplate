@@ -15,6 +15,8 @@
 - Various Control Panel Tweaks
 - Upsun Configuration
 - Vite Integration for Frontend Development
+- Vue.js Integration for Frontend Development
+- UnoCSS Integration for Styling
 
 ## Setup
 
@@ -46,7 +48,7 @@ ddev craft install
 **build frontend**
 
 ```bash
-ddev pnpm run build
+ddev pnpm build
 ```
 
 **import data**
@@ -69,18 +71,19 @@ ddev launch
 - Frontend: https://craft.ddev.site/
 - Panel: https://panel.craft.ddev.site/
 - Mails: https://craft.ddev.site:8026/
-- UnoCSS: https://craft.ddev.site:3000/__unocss/
+- UnoCSS Inspector: https://craft.ddev.site:3000/__unocss/
+- Vue Development Tools: https://craft.ddev.site:3000/__devtools__/
 
 **start server**
 
 ```bash
-ddev pnpm run dev
+ddev pnpm dev
 ```
 
 **build assets**
 
 ```bash
-ddev pnpm run build
+ddev pnpm build
 ```
 
 **observe logs**
