@@ -1,5 +1,15 @@
 {% extends 'layouts/default.twig' %}
 
 {% block main %}
-	<h1 class="font-700 text-white">{{ entry.title }}</h1>
+	<h1 class="font-700">{{ entry.title }}</h1>
+
+	<button is="vue:app-button">
+		label
+	</button>
+
+	<br />
+
+	<app-button>
+		label
+	</app-button>
 {% endblock %}
