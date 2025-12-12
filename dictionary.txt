@@ -8,3 +8,5 @@ cpresources
 symplify
 htmlpurifier
 yiisoft
+pgsql
+cooldown

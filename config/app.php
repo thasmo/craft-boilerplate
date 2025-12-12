@@ -1,6 +1,8 @@
 <?php
 
 use craft\helpers\App;
+use craft\helpers\MailerHelper;
+use craft\mail\transportadapters\Sendmail;
 use modules\site\Module;
 
 return [
@@ -15,6 +17,22 @@ return [
 		'projectConfig' => function () {
 			$config = craft\helpers\App::projectConfigConfig();
 			$config['writeYamlAutomatically'] = Craft::$app->config->general->devMode;
+			return Craft::createObject($config);
+		},
+		'mailer' => function() {
+			$config = App::mailerConfig();
+
+			if (Craft::$app->getConfig()->getGeneral()->devMode) {
+				$adapter = MailerHelper::createTransportAdapter(
+					Sendmail::class,
+					[
+						'command' => App::env('DEV_EMAIL_SENDMAIL_COMMAND'),
+					],
+				);
+
+				$config['transport'] = $adapter->defineTransport();
+			}
+
 			return Craft::createObject($config);
 		},
 		'cache' => function () {
