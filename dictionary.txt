@@ -1,5 +1,6 @@
 webroot
 craftcms
+lettermint
 upsun
 ddev
 mailpit
