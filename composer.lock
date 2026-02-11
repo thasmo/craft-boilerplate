@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0922ca7f5e0af2d268b6c05fdfc1a594",
+    "content-hash": "5420435fd7d27901a5559b9e643279d8",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4289,6 +4289,127 @@
                 "source": "https://github.com/Seldaek/cli-prompt/tree/1.0.4"
             },
             "time": "2020-12-15T21:32:01+00:00"
+        },
+        {
+            "name": "somehow-digital/craft-lettermint",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/somehow-digital/craft-lettermint.git",
+                "reference": "38228d4a7d845a35d235afe99206436c54f73e00"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/somehow-digital/craft-lettermint/zipball/38228d4a7d845a35d235afe99206436c54f73e00",
+                "reference": "38228d4a7d845a35d235afe99206436c54f73e00",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^5.8.0",
+                "php": "^8.2",
+                "somehow-digital/symfony-lettermint-mailer": "^1.0.0"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Lettermint",
+                "handle": "lettermint"
+            },
+            "autoload": {
+                "psr-4": {
+                    "SomehowDigital\\Craft\\Lettermint\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Deinhamer",
+                    "email": "code@thasmo.dev",
+                    "homepage": "https://thasmo.com/"
+                }
+            ],
+            "description": "Lettermint Mailer Adapter for Craft CMS.",
+            "homepage": "https://somehow.digital/",
+            "keywords": [
+                "adapter",
+                "email",
+                "lettermint",
+                "plugin"
+            ],
+            "support": {
+                "docs": "https://github.com/somehow-digital/craft-lettermint",
+                "email": "support@somehow.digital",
+                "issues": "https://github.com/somehow-digital/craft-lettermint/issues",
+                "source": "https://github.com/somehow-digital/craft-lettermint"
+            },
+            "time": "2025-12-24T15:53:31+00:00"
+        },
+        {
+            "name": "somehow-digital/symfony-lettermint-mailer",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/somehow-digital/symfony-lettermint-mailer.git",
+                "reference": "58f2cfba5c089914b7451cc3e149941a55a75c0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/somehow-digital/symfony-lettermint-mailer/zipball/58f2cfba5c089914b7451cc3e149941a55a75c0c",
+                "reference": "58f2cfba5c089914b7451cc3e149941a55a75c0c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/mailer": "^7.4.0 || ^8.0.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.6.12",
+                "pestphp/pest": "^3.8.4 || ^4.2.0",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-mockery": "^2.0",
+                "symfony/http-client": "^7.4.1 || ^8.0.1",
+                "symfony/webhook": "^7.4.0 || ^8.0.0",
+                "symplify/easy-coding-standard": "^13.0.0"
+            },
+            "type": "symfony-mailer-bridge",
+            "autoload": {
+                "psr-4": {
+                    "SomehowDigital\\Symfony\\Component\\Mailer\\Bridge\\Lettermint\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Deinhamer",
+                    "email": "code@thasmo.dev"
+                }
+            ],
+            "description": "Symfony Lettermint Mailer Bridge",
+            "homepage": "https://somehow.digital/",
+            "keywords": [
+                "Bridge",
+                "api",
+                "email",
+                "lettermint",
+                "mailer",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/somehow-digital/symfony-lettermint-mailer/issues",
+                "source": "https://github.com/somehow-digital/symfony-lettermint-mailer/tree/v1.0.0"
+            },
+            "time": "2025-12-23T20:09:11+00:00"
         },
         {
             "name": "spomky-labs/cbor-php",

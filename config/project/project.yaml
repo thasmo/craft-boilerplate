@@ -1,16 +1,13 @@
-dateModified: 1765481009
+dateModified: 1770226831
 email:
   fromEmail: $APP_EMAIL_SENDER_ADDRESS
   fromName: $APP_EMAIL_SENDER_NAME
   replyToEmail: $APP_EMAIL_SENDER_ADDRESS
   template: null
   transportSettings:
-    host: $APP_EMAIL_SMTP_HOST
-    password: $APP_EMAIL_SMTP_PASSWORD
-    port: $APP_EMAIL_SMTP_PORT
-    useAuthentication: $APP_EMAIL_SMTP_AUTHENTICATION
-    username: $APP_EMAIL_SMTP_USERNAME
-  transportType: craft\mail\transportadapters\Smtp
+    route: ''
+    token: $APP_EMAIL_LETTERMINT_TOKEN
+  transportType: SomehowDigital\Craft\Lettermint\Adapter
 fs:
   storage:
     hasUrls: true
@@ -27,6 +24,10 @@ meta:
     c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: $DEFAULT_SITE_NAME # $DEFAULT_SITE_NAME
     ed02786e-e6b9-465c-b426-aadc034ea25e: 'Public Schema' # Public Schema
 plugins:
+  lettermint:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   vite:
     edition: standard
     enabled: true
@@ -36,7 +37,7 @@ system:
   live: true
   name: $APP_SYSTEM_NAME
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
