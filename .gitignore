@@ -3,6 +3,7 @@
 /node_modules/
 /vendor/
 /storage/
+/plugins/
 /web/cpresources/
 /web/files/
 /web/assets/
