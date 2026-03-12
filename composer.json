@@ -48,5 +48,12 @@
 		"psr-4": {
 			"modules\\site\\": "modules/site/"
 		}
-	}
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "./plugins/*",
+			"canonical": false
+		}
+	]
 }
