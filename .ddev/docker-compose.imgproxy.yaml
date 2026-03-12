@@ -1,0 +1,23 @@
+#ddev-generated
+services:
+    imgproxy:
+        container_name: ddev-${DDEV_SITENAME}-imgproxy
+        image: ghcr.io/imgproxy/imgproxy:latest
+        restart: "no"
+        # These labels ensure this service is discoverable by ddev.
+        labels:
+            com.ddev.site-name: ${DDEV_SITENAME}
+            com.ddev.approot: $DDEV_APPROOT
+        environment:
+            VIRTUAL_HOST: $DDEV_HOSTNAME
+            HTTPS_EXPOSE: 8081:8080
+            HTTP_EXPOSE: 8080:8080
+            IMGPROXY_BASE_URL: http://web:80/
+            IMGPROXY_ALLOW_ORIGIN: "*"
+        volumes:
+            - ".:/mnt/ddev_config"
+            - "ddev-global-cache:/mnt/ddev-global-cache"
+            - "imgproxy-cache:/imgproxy/cache"
+
+volumes:
+    imgproxy-cache:
