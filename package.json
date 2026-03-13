@@ -37,7 +37,7 @@
 		"knip": "^5.40.0",
 		"lint-staged": "^16.0.0",
 		"unocss": "^66.5.9",
-		"vite": "^7.2.4",
+		"vite": "^8.0.0",
 		"vite-plugin-restart": "^2.0.0",
 		"vite-plugin-vue-devtools": "^8.0.5"
 	},
