@@ -42,9 +42,6 @@
 		"vite-plugin-vue-devtools": "^8.0.5"
 	},
 	"pnpm": {
-		"overrides": {
-			"vite": "npm:rolldown-vite@latest"
-		},
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
