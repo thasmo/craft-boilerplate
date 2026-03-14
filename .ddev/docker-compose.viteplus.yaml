@@ -1,0 +1,25 @@
+#ddev-generated
+services:
+  viteplus:
+    container_name: ddev-${DDEV_SITENAME}-viteplus
+    image: ghcr.io/somehow-digital/viteplus:main
+    command: tail -f /dev/null
+    restart: no
+    working_dir: /app
+    user: "${DDEV_UID}:${DDEV_GID}"
+    volumes:
+      - type: bind
+        source: ${DDEV_APPROOT}
+        target: /app
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
+    ports:
+      - "5173"
+    environment:
+      VIRTUAL_HOST: ${DDEV_HOSTNAME}
+      HTTPS_EXPOSE: "5173:5173"
+    x-ddev:
+      describe-url-port: "https://${DDEV_HOSTNAME}:5173"
+      describe-info: "Vite+ dev server container. Run: ddev vp dev"
+      ssh-shell: bash

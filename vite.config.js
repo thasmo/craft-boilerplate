@@ -29,12 +29,15 @@ export default defineConfig(({ command, mode }) => {
 		},
 		server: {
 			host: '0.0.0.0',
-			port: 3000,
+			port: 5173,
 			strictPort: true,
-			origin: `${environment.DEFAULT_SITE_URL}:3000`,
+			origin: `${environment.DEFAULT_SITE_URL}:5173`,
 			cors: {
 				origin: /https?:\/\/(.+)?(\.ddev\.site)(?::\d+)?$/,
 			},
+			allowedHosts: [
+				'viteplus',
+			],
 		},
 		plugins: [
 			unocss(),

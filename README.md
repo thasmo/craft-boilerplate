@@ -71,8 +71,8 @@ ddev launch
 - Frontend: https://craft.ddev.site/
 - Panel: https://panel.craft.ddev.site/
 - Mails: https://craft.ddev.site:8026/
-- UnoCSS Inspector: https://craft.ddev.site:3000/__unocss/
-- Vue Development Tools: https://craft.ddev.site:3000/__devtools__/
+- UnoCSS Inspector: https://craft.ddev.site:5173/__unocss/
+- Vue Development Tools: https://craft.ddev.site:5173/__devtools__/
 
 **start server**
 

@@ -11,3 +11,4 @@ htmlpurifier
 yiisoft
 pgsql
 cooldown
+viteplus

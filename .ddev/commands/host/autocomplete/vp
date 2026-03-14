@@ -1,0 +1,65 @@
+#!/bin/bash
+## #ddev-generated
+set -euo pipefail
+
+cache_dir="${TMPDIR:-/tmp}/ddev-viteplus"
+cache_file="${cache_dir}/vp-subcommands.txt"
+
+mkdir -p "${cache_dir}" >/dev/null 2>&1 || true
+
+static_subcommands() {
+  cat <<'EOF'
+add
+build
+cache
+check
+config
+create
+dedupe
+dev
+dlx
+env
+exec
+fmt
+help
+implode
+info
+install
+link
+lint
+list
+migrate
+outdated
+pack
+pm
+preview
+remove
+run
+staged
+test
+unlink
+update
+upgrade
+why
+EOF
+}
+
+generate_subcommands() {
+  static_subcommands
+
+  if command -v ddev >/dev/null 2>&1; then
+    ddev exec -s viteplus -- bash -lc 'vp help 2>/dev/null' 2>/dev/null \
+      | sed -nE 's/^[[:space:]]{2,}([a-z][a-z0-9-]+).*/\1/p' \
+      | sed -E 's/[^a-z0-9-].*$//' \
+      | grep -E '^[a-z][a-z0-9-]+$' \
+      || true
+  fi
+}
+
+if [ -f "${cache_file}" ] && find "${cache_file}" -mmin -1440 >/dev/null 2>&1; then
+  cat "${cache_file}"
+  exit 0
+fi
+
+generate_subcommands | sort -u >"${cache_file}"
+cat "${cache_file}"

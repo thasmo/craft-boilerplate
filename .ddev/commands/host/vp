@@ -1,0 +1,9 @@
+#!/bin/bash
+## #ddev-generated
+## Description: Run Vite+ (vp) in the ddev-viteplus service container
+## Usage: vp <command> [args]
+## Example: ddev vp install\nddev vp dev
+## AutocompleteTerms: ["add","build","cache","check","config","create","dedupe","dev","dlx","env","exec","fmt","help","implode","info","install","link","lint","list","migrate","outdated","pack","pm","preview","remove","run","staged","test","unlink","update","upgrade","why"]
+set -euo pipefail
+
+ddev exec -s viteplus -- vp "$@"
