@@ -12,6 +12,8 @@ export default {
 		'.upsun/',
 		'vendor/',
 		'storage/',
+		'plugins/',
+		'web/assets/',
 		'web/cpresources/',
 		'config/htmlpurifier/',
 		'composer.json',
