@@ -8,17 +8,27 @@ maxAuthors: 1
 name: Pages
 previewTargets:
   -
-    label: 'Primary entry page'
+    label: DEFAULT
     refresh: '1'
     urlFormat: '{url}'
-propagationMethod: all
+propagationMethod: none
 siteSettings:
-  c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: # $DEFAULT_SITE_NAME
+  2f26be8c-e6f9-474a-93ea-388a3174f124: # GAMMA
+    enabledByDefault: true
+    hasUrls: true
+    template: sections/pages.twig
+    uriFormat: '{slug}'
+  c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: # ALPHA
+    enabledByDefault: true
+    hasUrls: true
+    template: sections/pages.twig
+    uriFormat: '{slug}'
+  e92bcaad-05ae-47a3-86cd-00692d6a6f84: # BETA
     enabledByDefault: true
     hasUrls: true
     template: sections/pages.twig
     uriFormat: '{slug}'
 structure:
-  maxLevels: null
+  maxLevels: 3
   uid: b7bb328d-9f43-4fda-af50-0af8bef1b3ee
 type: structure

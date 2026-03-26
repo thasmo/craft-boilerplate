@@ -1,0 +1,9 @@
+baseUrl: $SITE_GAMMA_URL
+enabled: true
+handle: gamma
+hasUrls: true
+language: $SITE_GAMMA_LANGUAGE
+name: GAMMA
+primary: false
+siteGroup: 1625d54e-a5f5-427c-93ad-bf872e3e115c # MULTI
+sortOrder: 3
