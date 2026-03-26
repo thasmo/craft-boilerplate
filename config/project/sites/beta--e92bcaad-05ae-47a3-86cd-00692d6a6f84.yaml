@@ -1,5 +1,5 @@
 baseUrl: $SITE_BETA_URL
-enabled: true
+enabled: '1'
 handle: beta
 hasUrls: true
 language: $SITE_BETA_LANGUAGE

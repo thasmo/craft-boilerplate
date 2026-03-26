@@ -1,5 +1,5 @@
 baseUrl: $SITE_GAMMA_URL
-enabled: true
+enabled: '1'
 handle: gamma
 hasUrls: true
 language: $SITE_GAMMA_LANGUAGE
