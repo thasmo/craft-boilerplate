@@ -1,4 +1,4 @@
-dateModified: 1770226831
+dateModified: 1774550675
 email:
   fromEmail: $APP_EMAIL_SENDER_ADDRESS
   fromName: $APP_EMAIL_SENDER_NAME
@@ -33,7 +33,6 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  edition: solo
   live: true
   name: $APP_SYSTEM_NAME
   retryDuration: null
