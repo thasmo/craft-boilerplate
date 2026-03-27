@@ -1,4 +1,4 @@
-dateModified: 1774556711
+dateModified: 1774617261
 email:
   fromEmail: $APP_EMAIL_SENDER_ADDRESS
   fromName: $APP_EMAIL_SENDER_NAME
@@ -28,6 +28,10 @@ meta:
     ed02786e-e6b9-465c-b426-aadc034ea25e: 'Public Schema' # Public Schema
 plugins:
   lettermint:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  skip:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
