@@ -9,11 +9,9 @@ return [
 	'id' => App::env('CRAFT_APP_ID'),
 	'modules' => [
 		'site' => modules\site\Module::class,
-		'template' => modules\template\Template::class,
 	],
 	'bootstrap' => [
 		'site',
-		'template',
 	],
 	'components' => [
 		'projectConfig' => function () {

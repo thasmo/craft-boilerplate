@@ -1,0 +1,73 @@
+columnSuffix: null
+handle: header
+instructions: null
+name: Header
+searchable: false
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - 198b2b08-e89a-4d92-bb71-725bacd28967
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - e8439990-4c84-4e96-b7d8-26ab414186ed
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-03-29T17:29:45+00:00'
+                            9:
+                              - uid
+                              - a78775d5-7b89-410b-802d-0389c274e6b8
+                            12:
+                              - fieldUid
+                              - 3ce4aff3-b884-404d-b927-52a4cfbedfe2 # Headline
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-03-29T17:33:27+00:00'
+                            9:
+                              - uid
+                              - d23ce46a-ff49-461b-b801-bd663405ecfd
+                            12:
+                              - fieldUid
+                              - 1cc7bddd-c05d-49f7-b250-02ba33a1e021 # Headline Level
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

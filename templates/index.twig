@@ -1,0 +1,9 @@
+{% set section = entry.section.handle %}
+{% set type = entry.type.handle %}
+
+{% include [
+	'pages/' ~ section ~ '/' ~ type,
+	'pages/' ~ type,
+] with {
+	entry,
+} only %}

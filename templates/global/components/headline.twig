@@ -1,0 +1,8 @@
+{% set min = 2 %}
+{% set max = 6 %}
+{% set level = max(min, min(max, level|default ?: min)) %}
+{% set variant = variant|default ? max(min, min(max, variant|integer ?: min)) : level %}
+
+<h{{ level }} class="h{{ variant }}">
+	{{ text|nl2br }}
+</h{{ level }}>

@@ -1,0 +1,10 @@
+{% set entry = craft.entries({
+	section: 'system',
+	slug: '404',
+}).one() %}
+
+{% extends 'layouts/default.twig' %}
+
+{% block main %}
+	TEST
+{% endblock %}

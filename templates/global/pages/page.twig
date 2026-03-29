@@ -1,0 +1,20 @@
+{% extends 'layouts/default.twig' %}
+
+{% block content %}
+	{% for element in entry.content %}
+		{% set handle = element.type.handle|replace({'content_': ''}) %}
+
+		{% embed 'components/section.twig' with {
+			id: element.id,
+		} %}
+			{% block content %}
+				{% include [
+					'elements/' ~ handle ~ '.twig',
+				] with {
+					element,
+					page: entry,
+				} only %}
+			{% endblock %}
+		{% endembed %}
+	{% endfor %}
+{% endblock %}

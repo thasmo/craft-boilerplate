@@ -1,0 +1,8 @@
+{% embed 'components/headline.twig' with {
+	text: element.header.headline,
+	level: element.header.headline_level.value,
+} only %}{% endembed %}
+
+{% embed 'components/text.twig' with {
+	text: element.text,
+} only %}{% endembed %}

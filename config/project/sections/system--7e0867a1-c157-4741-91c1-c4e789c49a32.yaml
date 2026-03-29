@@ -3,32 +3,29 @@ enableVersioning: true
 entryTypes:
   -
     uid: 1b5b6229-0f99-4c8a-84be-03bda866ff34 # Page
-handle: pages
+handle: system
 maxAuthors: 1
-name: Pages
+name: System
 previewTargets:
   -
     label: DEFAULT
     refresh: '1'
-    urlFormat: '{url}'
-propagationMethod: none
+    urlFormat: '{slug}'
+propagationMethod: all
 siteSettings:
   2f26be8c-e6f9-474a-93ea-388a3174f124: # GAMMA
-    enabledByDefault: false
+    enabledByDefault: true
     hasUrls: true
     template: null
     uriFormat: '{slug}'
   c6bfe418-2d2a-4ce7-876c-1f06f88a1ad9: # ALPHA
-    enabledByDefault: false
+    enabledByDefault: true
     hasUrls: true
     template: null
     uriFormat: '{slug}'
   e92bcaad-05ae-47a3-86cd-00692d6a6f84: # BETA
-    enabledByDefault: false
+    enabledByDefault: true
     hasUrls: true
     template: null
     uriFormat: '{slug}'
-structure:
-  maxLevels: 3
-  uid: b7bb328d-9f43-4fda-af50-0af8bef1b3ee
-type: structure
+type: channel
