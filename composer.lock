@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06703b3f571a905ba4e22af632e05019",
+    "content-hash": "1235962f166d133fe94582b24c266ae6",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4248,12 +4248,69 @@
             "time": "2020-12-15T21:32:01+00:00"
         },
         {
+            "name": "somehow-digital/craft-blaze",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./plugins/somehow-digital-craft-blaze",
+                "reference": "0532a6a70f226ba654027383ce8481561dab6f65"
+            },
+            "require": {
+                "craftcms/cms": "^5.8.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Blaze",
+                "handle": "blaze",
+                "class": "SomehowDigital\\Craft\\Blaze\\Blaze",
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SomehowDigital\\Craft\\Blaze\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Deinhamer",
+                    "email": "code@thasmo.dev",
+                    "homepage": "https://thasmo.com/"
+                }
+            ],
+            "description": "Simple frontend cache for Craft CMS.",
+            "homepage": "https://somehow.digital/",
+            "keywords": [
+                "cache",
+                "frontend",
+                "performance",
+                "static"
+            ],
+            "support": {
+                "email": "support@somehow.digital",
+                "docs": "https://github.com/somehow-digital/craft-blaze",
+                "source": "https://github.com/somehow-digital/craft-blaze",
+                "issues": "https://github.com/somehow-digital/craft-blaze/issues"
+            },
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "somehow-digital/craft-lettermint",
             "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "./plugins/somehow-digital-craft-lettermint",
-                "reference": "d3fecb34b3ada624ccf90d4a8728f22e88e94af1"
+                "reference": "a084cc25938d386d5f58c88bc5d9e7bac2294c24"
             },
             "require": {
                 "craftcms/cms": "^5.8.0",
@@ -4310,7 +4367,7 @@
             "dist": {
                 "type": "path",
                 "url": "./plugins/somehow-digital-craft-skip",
-                "reference": "db953b5f23ce575b547cf4fca34bc1cf90035f6f"
+                "reference": "8858cbf4658c407c38d256365fdced3713d88920"
             },
             "require": {
                 "craftcms/cms": "^5.8.0",
@@ -4369,7 +4426,7 @@
             "dist": {
                 "type": "path",
                 "url": "./plugins/somehow-digital-craft-stack",
-                "reference": "faf6e3abc35906d82475e38541a18995f64f074d"
+                "reference": "ae6e96f45d8b93857086db9620fca520938ca471"
             },
             "require": {
                 "craftcms/cms": "^5.8.0",
@@ -4402,13 +4459,12 @@
                     "homepage": "https://thasmo.com/"
                 }
             ],
-            "description": "Allows to stack multiple Twig template directories.",
+            "description": "Brings a namespace system to better organize and load Twig templates in Craft CMS.",
             "homepage": "https://somehow.digital/",
             "keywords": [
-                "cache",
-                "config",
-                "performance",
-                "reload",
+                "namespace",
+                "organization",
+                "stack",
                 "template",
                 "twig"
             ],

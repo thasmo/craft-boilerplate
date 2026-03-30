@@ -1,3 +1,3 @@
 export default {
-	entry: ['assets/main.ts'],
+	entry: ['assets/sites/*/main.ts'],
 };

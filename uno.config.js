@@ -19,11 +19,6 @@ export default defineConfig({
 		],
 	],
 	content: {
-		pipeline: {
-			include: [
-				/\.(vue|php|html|twig)($|\?)/,
-			],
-		},
 		filesystem: [
 			PATHS.templates,
 		],

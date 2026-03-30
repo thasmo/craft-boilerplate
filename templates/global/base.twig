@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ craft.app.language }}">
+	<head>
+		<meta charset="{{ craft.app.charset }}" />
+
+		<title>{{ entry.title }}</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+
+		{% set group = craft.app.sites.currentSite.group.name|lower %}
+		{{ craft.vite.script('assets/sites/' ~ group ~ '/main.ts', false) }}
+	</head>
+
+	<body class="text-white bg-gray-950">
+		{% block body %}{% endblock %}
+	</body>
+</html>

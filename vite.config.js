@@ -1,7 +1,6 @@
 import vue from '@vitejs/plugin-vue';
-import process from 'node:process';
 import unocss from 'unocss/vite';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
 import restart from 'vite-plugin-restart';
 import tools from 'vite-plugin-vue-devtools';
 
@@ -9,9 +8,7 @@ export const PATHS = {
 	templates: 'templates/**/*.twig',
 };
 
-export default defineConfig(({ command, mode }) => {
-	const environment = loadEnv(mode, process.cwd(), '');
-
+export default defineConfig(({ command }) => {
 	return {
 		build: {
 			target: 'esnext',
@@ -23,7 +20,8 @@ export default defineConfig(({ command, mode }) => {
 			},
 			rollupOptions: {
 				input: {
-					app: 'assets/main.ts',
+					single: 'assets/sites/single/main.ts',
+					multi: 'assets/sites/multi/main.ts',
 				},
 			},
 		},
@@ -31,12 +29,12 @@ export default defineConfig(({ command, mode }) => {
 			host: '0.0.0.0',
 			port: 5173,
 			strictPort: true,
-			origin: `${environment.DEFAULT_SITE_URL}:5173`,
 			cors: {
 				origin: /https?:\/\/(.+)?(\.ddev\.site)(?::\d+)?$/,
 			},
 			allowedHosts: [
 				'viteplus',
+				'.ddev.site',
 			],
 		},
 		plugins: [
