@@ -8,6 +8,8 @@ export const PATHS = {
 	templates: 'templates/**/*.twig',
 };
 
+const origin = /https?:\/\/(.+)?(\.ddev\.site)(?::\d+)?$/;
+
 export default defineConfig(({ command }) => {
 	return {
 		build: {
@@ -30,7 +32,7 @@ export default defineConfig(({ command }) => {
 			port: 5173,
 			strictPort: true,
 			cors: {
-				origin: /https?:\/\/(.+)?(\.ddev\.site)(?::\d+)?$/,
+				origin,
 			},
 			allowedHosts: [
 				'viteplus',
