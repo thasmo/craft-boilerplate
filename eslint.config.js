@@ -4,4 +4,4 @@ import { globalIgnores } from 'eslint/config';
 export default config({
 	vue: true,
 	unocss: true,
-}, globalIgnores(['.ddev/', 'config/project/']));
+}, globalIgnores(['.ddev/', 'config/project/', 'plugins/']));
