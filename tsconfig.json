@@ -1,0 +1,10 @@
+{
+	"extends": "@somehow-digital/typescript-config/basic",
+	"include": [
+		"assets/**/*.js",
+		"assets/**/*.ts",
+		"assets/**/*.vue",
+		"*.config.js",
+		"*.config.ts"
+	]
+}

@@ -1,5 +1,4 @@
 import { createApp, defineAsyncComponent } from 'vue';
-
 import 'virtual:uno.css';
 import '../../global/styles.css';
 
