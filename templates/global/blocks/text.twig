@@ -1,0 +1,10 @@
+{# @var block \craft\elements\Entry #}
+
+{% embed 'global/components/headline.twig' with {
+	text: block.header.headline,
+	level: block.header.headline_level.value,
+} only %}{% endembed %}
+
+{% embed 'components/text.twig' with {
+	text: block.text,
+} only %}{% endembed %}

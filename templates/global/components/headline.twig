@@ -1,3 +1,7 @@
+{# @var text string #}
+{# @var level int #}
+{# @var variant int #}
+
 {% set min = 2 %}
 {% set max = 6 %}
 {% set level = max(min, min(max, level|default ?: min)) %}

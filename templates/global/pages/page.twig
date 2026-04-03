@@ -1,17 +1,19 @@
+{# @var entry \craft\elements\Entry #}
+
 {% extends 'layouts/default.twig' %}
 
 {% block content %}
-	{% for element in entry.content %}
-		{% set handle = element.type.handle|replace({'content_': ''}) %}
+	{% for block in entry.content %}
+		{% set handle = block.type.handle|replace({'content_': ''}) %}
 
 		{% embed 'components/section.twig' with {
-			id: element.id,
+			id: block.id,
 		} %}
 			{% block content %}
 				{% include [
-					'elements/' ~ handle ~ '.twig',
+					'blocks/' ~ handle ~ '.twig',
 				] with {
-					element,
+					block,
 					page: entry,
 				} only %}
 			{% endblock %}
