@@ -1,4 +1,6 @@
 import vue from '@vitejs/plugin-vue';
+import path from 'node:path';
+import { globSync } from 'tinyglobby';
 import unocss from 'unocss/vite';
 import { defineConfig } from 'vite';
 import restart from 'vite-plugin-restart';
@@ -20,11 +22,13 @@ export default defineConfig(({ command }) => {
 			modulePreload: {
 				polyfill: false,
 			},
-			rollupOptions: {
-				input: {
-					single: 'assets/sites/single/main.ts',
-					multi: 'assets/sites/multi/main.ts',
-				},
+			rolldownOptions: {
+				input: Object.fromEntries(
+					globSync('assets/sites/*/main.ts').map(file => [
+						path.basename(path.dirname(file)),
+						path.resolve(file),
+					]),
+				),
 			},
 		},
 		server: {
