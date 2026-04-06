@@ -1,5 +1,6 @@
 import presetBasic from '@somehow-digital/unocss-preset';
-import { defineConfig } from 'unocss';
+import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local';
+import { defineConfig, presetWebFonts, transformerDirectives } from 'unocss';
 import { PATHS } from './vite.config.js';
 
 const RULES = {
@@ -8,14 +9,32 @@ const RULES = {
 
 const CONTENT = {
 	include: [
-		/\.(vue|php|html|twig|js|ts)(\?|$)/,
+		/\.(vue|php|html|twig|js|ts|css)(\?|$)/,
 	],
 };
 
 export default defineConfig({
 	presets: [
 		presetBasic(),
+		presetWebFonts({
+			fonts: {
+				display: 'Sentient',
+				base: 'Sora',
+			},
+			provider: 'fontshare',
+			processors: createLocalFontProcessor({
+				cacheDir: 'node_modules/.cache/unocss/fonts/',
+				fontAssetsDir: 'web/assets/fonts/',
+				fontServeBaseUrl: '/assets/fonts',
+			}),
+		}),
 	],
+	theme: {
+		fonts: {
+			display: 'Sentient',
+			base: 'Sora',
+		},
+	},
 	rules: [
 		[
 			RULES['bg-current'],
@@ -27,6 +46,9 @@ export default defineConfig({
 				};
 			},
 		],
+	],
+	transformers: [
+		transformerDirectives(),
 	],
 	content: {
 		pipeline: {

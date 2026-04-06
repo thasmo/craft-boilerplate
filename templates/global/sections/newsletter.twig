@@ -1,0 +1,16 @@
+{% embed 'components/section.twig' with {
+	anchor: 'newsletter',
+} %}
+	{% block content %}
+		{% embed 'components/container.twig' only %}
+			{% block content %}
+				{% embed 'components/headline.twig' with {
+					text: 'Newsletter',
+					level: 0,
+					size: 2,
+				} only %}{% endembed %}
+
+			{% endblock %}
+		{% endembed %}
+	{% endblock %}
+{% endembed %}

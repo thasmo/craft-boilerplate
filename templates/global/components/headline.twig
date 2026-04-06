@@ -1,12 +1,27 @@
 {# @var text string #}
+{# @var anchor string #}
 {# @var level int #}
-{# @var variant int #}
+{# @var size int #}
+{# @var variants object #}
 
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
 {% set min = 2 %}
 {% set max = 6 %}
-{% set level = max(min, min(max, level|default ?: min)) %}
-{% set variant = variant|default ? max(min, min(max, variant|integer ?: min)) : level %}
+{% set anchor = anchor|default %}
+{% set level = level ? max(min, min(max, level|default ?: min)) : null %}
+{% set size = size|default ? max(min, min(max, size|integer ?: min)) : level %}
+{% set variants = {}|merge(variants|default({}))|filter %}
+{# </editor-fold> #}
 
-<h{{ level }} class="h{{ variant }}">
+{# <editor-fold desc="attributes" defaultstate="collapsed"> #}
+{% set attributes %}
+	data-size="{{ size }}"
+	{% for name, value in variants %}
+		data-{{ name }}="{{ value }}"
+	{% endfor %}
+{% endset %}
+{# </editor-fold> #}
+
+<h{{ level }} {{ attributes }} {{ anchor ? 'id="' ~ anchor ~ '"' }} class="headline-{{ size }}">
 	{{ text|nl2br }}
 </h{{ level }}>

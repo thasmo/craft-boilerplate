@@ -15,6 +15,7 @@ export default {
 		'plugins/',
 		'web/assets/',
 		'web/cpresources/',
+		'config/project/',
 		'config/htmlpurifier/',
 		'composer.json',
 		'config/license.*',

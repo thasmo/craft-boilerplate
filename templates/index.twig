@@ -1,11 +1,11 @@
 {# @var entry \craft\elements\Entry #}
 
-{% set section = entry.section.handle %}
-{% set type = entry.type.handle %}
+{% set section = entry.section.handle|lower %}
+{% set type = entry.type.handle|lower %}
 
 {% include [
-	'pages/' ~ section ~ '/' ~ type,
-	'pages/' ~ type,
+	'entries/' ~ section ~ '/' ~ type ~ '.twig',
+	'entries/' ~ type ~ '.twig',
 ] with {
 	entry,
 } only %}

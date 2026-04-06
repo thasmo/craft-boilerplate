@@ -2,6 +2,18 @@
 
 {% block body %}
 	<main id="main">
-		{% block content %}{% endblock %}
+		{% block main %}{% endblock %}
 	</main>
+
+	<aside id="aside">
+		{% block aside %}{% endblock %}
+	</aside>
+
+	<footer>
+		{% embed 'components/section.twig' only %}
+			{% block content %}
+				FOOTER
+			{% endblock %}
+		{% endembed %}
+	</footer>
 {% endblock %}

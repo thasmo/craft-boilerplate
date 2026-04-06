@@ -1,6 +1,6 @@
 import { createApp, defineAsyncComponent } from 'vue';
 import 'virtual:uno.css';
-import '../../global/styles.css';
+import '../../global/styles/base.css';
 
 const application = createApp({});
 

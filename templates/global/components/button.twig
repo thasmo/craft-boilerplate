@@ -1,5 +1,30 @@
 {# @var label string #}
+{# @var url string #}
+{# @var target string #}
+{# @var variants object #}
 
-<a href="#">
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set label = label|default %}
+{% set url = url|default('#') %}
+{% set target = target|default('_self') %}
+{% set variants = {
+	theme: '',
+	size: 'regular',
+	appearance: 'solid',
+}|merge(variants|default({}))|filter %}
+{# </editor-fold> #}
+
+{# <editor-fold desc="attributes" defaultstate="collapsed"> #}
+{% set attributes %}
+	href="{{ url }}"
+	target="{{ target }}"
+	rel="noopener noreferrer"
+	{% for name, value in variants %}
+		data-{{ name }}="{{ value }}"
+	{% endfor %}
+{% endset %}
+{# </editor-fold> #}
+
+<a {{ attributes }} class="inline-block bg-white rounded-full text-black px-3 py-2 data-[size='small']:(px-2 py-1)">
 	{{ label }}
 </a>

@@ -1,0 +1,22 @@
+{# @var entry \craft\elements\Entry #}
+
+{% extends 'layouts/default.twig' %}
+
+{% block main %}
+	{% set section = entry.section.handle|lower %}
+
+	{% for block in entry.content %}
+		{% set type = block.type.handle|replace({'content_': ''})|lower %}
+
+		{% include [
+			'blocks/' ~ section ~ '/' ~ type ~ '.twig',
+			'blocks/' ~ type ~ '.twig',
+		] with {
+			block,
+		} only %}
+	{% endfor %}
+{% endblock %}
+
+{% block aside %}
+	{% include 'sections/newsletter.twig' only %}
+{% endblock %}

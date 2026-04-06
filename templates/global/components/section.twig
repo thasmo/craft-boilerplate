@@ -1,5 +1,9 @@
-{# @var id string #}
+{# @var anchor string #}
 
-<section id="{{ id }}">
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set anchor = anchor|default %}
+{# </editor-fold> #}
+
+<section {{ anchor ? 'id="' ~ anchor ~ '"' }}>
 	{% block content %}{% endblock %}
 </section>

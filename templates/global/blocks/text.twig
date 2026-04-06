@@ -1,10 +1,34 @@
 {# @var block \craft\elements\Entry #}
 
-{% embed 'global/components/headline.twig' with {
-	text: block.header.headline,
-	level: block.header.headline_level.value,
-} only %}{% endembed %}
+{% embed 'components/section.twig' with {
+	anchor: block.id,
+} %}
+	{% block content %}
+		{% embed 'components/headline.twig' with {
+			text: block.header.headline,
+			level: block.header.headline_level.value,
+		} only %}{% endembed %}
 
-{% embed 'components/text.twig' with {
-	text: block.text,
-} only %}{% endembed %}
+		{% embed 'components/text.twig' with {
+			text: block.text,
+		} only %}{% endembed %}
+
+		{% embed 'components/button.twig' with {
+			label: 'regular button',
+			url: '/',
+			variants: {
+				size: 'regular',
+				appearance: 'solid',
+			},
+		} only %}{% endembed %}
+
+		{% embed 'components/button.twig' with {
+			label: 'small button',
+			url: '/',
+			variants: {
+				size: 'small',
+				appearance: 'solid',
+			},
+		} only %}{% endembed %}
+	{% endblock %}
+{% endembed %}

@@ -1,4 +1,4 @@
-dateModified: 1774806095
+dateModified: 1775390897
 elementSources:
   craft\elements\Entry:
     -
@@ -71,10 +71,27 @@ meta:
     e92bcaad-05ae-47a3-86cd-00692d6a6f84: BETA # BETA
     ed02786e-e6b9-465c-b426-aadc034ea25e: 'Public Schema' # Public Schema
 plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 5.0.0.1
   lettermint:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
+  ping:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      enabledChannels:
+        - panel
+        - ''
+        - ''
+      enabledTopics:
+        - 'ping:message'
+        - ''
+        - ''
   skip:
     edition: standard
     enabled: true
