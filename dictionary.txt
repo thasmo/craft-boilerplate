@@ -17,3 +17,4 @@ endfor
 defaultstate
 fontshare
 ckeditor
+trufflesecurity
