@@ -1,7 +1,7 @@
 name: viteplus
 repository: somehow-digital/ddev-viteplus
-version: v1.0.2
-install_date: "2026-03-14T23:42:27+01:00"
+version: v1.0.3
+install_date: "2026-04-10T20:16:48+02:00"
 project_files:
     - docker-compose.viteplus.yaml
     - commands/host/vp
