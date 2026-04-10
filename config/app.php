@@ -85,5 +85,20 @@ return [
 				'throwExceptions' => Craft::$app->config->general->devMode,
 			]);
 		},
+		'security' => [
+			'sensitiveKeywords' => [
+				'private',
+				'secret',
+				'key',
+				'token',
+				'password',
+				'auth',
+				'jwt',
+				'otp',
+			],
+		],
+		'log' => [
+			'traceLevel' => 10,
+		],
 	],
 ];
