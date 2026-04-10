@@ -24,6 +24,8 @@ class Module extends \yii\base\Module
 
 		parent::init();
 
+		Craft::$app->view->registerTwigExtension(new TwigExtension());
+
 		if (Craft::$app->config->general->devMode) {
 			return;
 		}
