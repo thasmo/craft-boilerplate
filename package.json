@@ -7,9 +7,9 @@
 		"pnpm": ">=10"
 	},
 	"scripts": {
-		"dev": "vite",
-		"preview": "vite preview",
-		"build": "vite build",
+		"dev": "vp dev",
+		"preview": "vp preview",
+		"build": "vp build",
 		"prepare": "concurrently --group --prefix-colors 'auto' 'pnpm:prepare:*'",
 		"prepare:husky": "husky",
 		"lint": "concurrently --group --prefix-colors 'auto' 'pnpm:lint:*'",
@@ -41,7 +41,6 @@
 		"lint-staged": "^16.0.0",
 		"tinyglobby": "^0.2.15",
 		"unocss": "^66.5.9",
-		"vite": "^8.0.0",
 		"vite-plugin-restart": "^2.0.0",
 		"vite-plugin-vue-devtools": "^8.0.5",
 		"vite-plus": "^0.1.16"

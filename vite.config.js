@@ -2,9 +2,9 @@ import vue from '@vitejs/plugin-vue';
 import path from 'node:path';
 import { globSync } from 'tinyglobby';
 import unocss from 'unocss/vite';
-import { defineConfig } from 'vite';
 import restart from 'vite-plugin-restart';
 import tools from 'vite-plugin-vue-devtools';
+import { defineConfig } from 'vite-plus';
 
 export const PATHS = {
 	templates: 'templates/**/*.twig',
