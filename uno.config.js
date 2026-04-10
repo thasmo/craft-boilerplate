@@ -1,6 +1,6 @@
 import presetBasic from '@somehow-digital/unocss-preset';
 import { createLocalFontProcessor } from '@unocss/preset-web-fonts/local';
-import { defineConfig, presetWebFonts, transformerDirectives } from 'unocss';
+import { defineConfig, presetWebFonts } from 'unocss';
 import { PATHS } from './vite.config.js';
 
 const RULES = {
@@ -46,9 +46,6 @@ export default defineConfig({
 				};
 			},
 		],
-	],
-	transformers: [
-		transformerDirectives(),
 	],
 	content: {
 		pipeline: {
