@@ -14,9 +14,16 @@
 - Queue Job Storage via Redis
 - Various Control Panel Tweaks
 - Upsun Configuration
-- Vite Integration for Frontend Development
+- Vite+ Integration for Frontend Development
 - Vue.js Integration for Frontend Development
 - UnoCSS Integration for Styling
+
+## Prerequisites
+
+- Git
+- DDEV
+- Vite+
+- Upsun
 
 ## Setup
 
@@ -36,19 +43,19 @@ ddev start
 
 ```bash
 ddev composer install
-ddev pnpm install
+ddev vp install
+```
+
+**build frontend**
+
+```bash
+ddev vp build
 ```
 
 **install application**
 
 ```bash
 ddev craft install
-```
-
-**build frontend**
-
-```bash
-ddev pnpm build
 ```
 
 **import data**
@@ -77,13 +84,13 @@ ddev launch
 **start server**
 
 ```bash
-ddev pnpm dev
+ddev vp dev
 ```
 
-**build assets**
+**build bundle**
 
 ```bash
-ddev pnpm build
+ddev vp build
 ```
 
 **observe logs**
