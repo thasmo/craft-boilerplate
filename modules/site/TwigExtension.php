@@ -8,40 +8,45 @@ use Twig\TwigFunction;
 
 class TwigExtension extends AbstractExtension
 {
+	private const string EXPAND_PATTERN = '/([^\s(]+)([:|-])\(([^()]+)\)/';
+
 	public function getFilters(): array
 	{
 		return [
-			new TwigFilter('expand', [$this, 'expand']),
+			new TwigFilter('expand', $this->expand(...)),
 		];
 	}
 
 	public function getFunctions(): array
 	{
 		return [
-			new TwigFunction('expand', [$this, 'expand']),
+			new TwigFunction('expand', $this->expand(...)),
 		];
 	}
 
 	public function expand(string $classes): string
 	{
-		// Recursively expand nested groups from innermost to outermost
-		// Pattern matches: prefix followed by : or - and then (content without nested parens)
-		// The [^()]+ ensures we only match innermost groups first
-		$pattern = '/([^\s(]+)([:|-])\(([^()]+)\)/';
+		if (!str_contains($classes, '(')) {
+			return $classes;
+		}
 
 		do {
-			$classes = preg_replace_callback($pattern, function ($matches) {
-				$prefix = $matches[1];
-				$separator = $matches[2];
-				$content = trim($matches[3]);
+			$classes = preg_replace_callback(
+				self::EXPAND_PATTERN,
+				static function (array $matches): string {
+					$prefix = $matches[1];
+					$separator = $matches[2];
+					$parts = preg_split('/\s+/', trim($matches[3]), -1, PREG_SPLIT_NO_EMPTY);
 
-				$parts = array_filter(preg_split('/\s+/', $content));
-
-				return implode(' ', array_map(
-					fn($part) => $prefix . $separator . $part,
-					$parts
-				));
-			}, $classes, -1, $count);
+					return implode(' ', array_map(
+						static fn(string $part): string => $prefix . $separator . $part,
+						$parts
+					));
+				},
+				$classes,
+				-1,
+				$count
+			);
 		} while ($count > 0);
 
 		return $classes;
