@@ -1,5 +1,18 @@
 {# @var text string #}
+{# @var variants object #}
 
-<div class="text">
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set variants = {}|merge(variants|default({}))|filter %}
+{# </editor-fold> #}
+
+{# <editor-fold desc="variants" defaultstate="collapsed"> #}
+{% set variants %}
+	{% for name, value in variants %}
+		data-{{ name }}="{{ value }}"
+	{% endfor %}
+{% endset %}
+{# </editor-fold> #}
+
+<div class="{{ ''|expand }}" {{ variants }}>
 	{{ text }}
 </div>

@@ -13,8 +13,8 @@
 {% set variants = {}|merge(variants|default({}))|filter %}
 {# </editor-fold> #}
 
-{# <editor-fold desc="attributes" defaultstate="collapsed"> #}
-{% set attributes %}
+{# <editor-fold desc="variants" defaultstate="collapsed"> #}
+{% set variants %}
 	data-size="{{ size }}"
 	{% for name, value in variants %}
 		data-{{ name }}="{{ value }}"
@@ -22,6 +22,6 @@
 {% endset %}
 {# </editor-fold> #}
 
-<h{{ level }} {{ attributes }} {{ anchor ? 'id="' ~ anchor ~ '"' }} class="headline-{{ size }}">
+<h{{ level }} {{ anchor ? 'id="' ~ anchor ~ '"' }} class="headline-{{ size }}" {{ variants }}>
 	{{ text|nl2br }}
 </h{{ level }}>

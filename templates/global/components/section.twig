@@ -1,9 +1,19 @@
 {# @var anchor string #}
+{# @var variants object #}
 
 {# <editor-fold desc="defaults" defaultstate="collapsed"> #}
 {% set anchor = anchor|default %}
+{% set variants = {}|merge(variants|default({}))|filter %}
 {# </editor-fold> #}
 
-<section {{ anchor ? 'id="' ~ anchor ~ '"' }}>
+{# <editor-fold desc="variants" defaultstate="collapsed"> #}
+{% set variants %}
+	{% for name, value in variants %}
+		data-{{ name }}="{{ value }}"
+	{% endfor %}
+{% endset %}
+{# </editor-fold> #}
+
+<section {{ anchor ? 'id="' ~ anchor ~ '"' }} class="{{ ''|expand }}" {{ variants }}>
 	{% block content %}{% endblock %}
 </section>

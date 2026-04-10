@@ -1,3 +1,17 @@
-<div class="w-full max-w-1920px mx-auto">
+{# @var variants object #}
+
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set variants = {}|merge(variants|default({}))|filter %}
+{# </editor-fold> #}
+
+{# <editor-fold desc="variants" defaultstate="collapsed"> #}
+{% set variants %}
+	{% for name, value in variants %}
+		data-{{ name }}="{{ value }}"
+	{% endfor %}
+{% endset %}
+{# </editor-fold> #}
+
+<div class="{{ 'w-full max-w-1920px mx-auto'|expand }}" {{ variants }}>
 	{% block content %}{% endblock %}
 </div>

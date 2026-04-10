@@ -14,17 +14,14 @@
 }|merge(variants|default({}))|filter %}
 {# </editor-fold> #}
 
-{# <editor-fold desc="attributes" defaultstate="collapsed"> #}
-{% set attributes %}
-	href="{{ url }}"
-	target="{{ target }}"
-	rel="noopener noreferrer"
+{# <editor-fold desc="variants" defaultstate="collapsed"> #}
+{% set variants %}
 	{% for name, value in variants %}
 		data-{{ name }}="{{ value }}"
 	{% endfor %}
 {% endset %}
 {# </editor-fold> #}
 
-<a {{ attributes }} class="inline-block bg-white rounded-full text-black px-3 py-2 data-[size='small']:(px-2 py-1)">
+<a href="{{ url }}" target="{{ target }}" rel="noopener noreferrer" class="{{ 'inline-block bg-white rounded-full text-black px-3 py-2 data-[size=small]:(px-2 py-1)'|expand }}" {{ variants }}>
 	{{ label }}
 </a>
