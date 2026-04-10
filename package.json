@@ -32,6 +32,7 @@
 		"@somehow-digital/unocss-preset": "^2.1.0",
 		"@unocss/preset-web-fonts": "^66.6.7",
 		"@vitejs/plugin-vue": "^6.0.2",
+		"@voidzero-dev/vite-plus-core": "^0.1.16",
 		"concurrently": "^9.1.0",
 		"cspell": "^10.0.0",
 		"eslint": "^10.0.0",
@@ -42,6 +43,7 @@
 		"unocss": "^66.5.9",
 		"vite": "^8.0.0",
 		"vite-plugin-restart": "^2.0.0",
-		"vite-plugin-vue-devtools": "^8.0.5"
+		"vite-plugin-vue-devtools": "^8.0.5",
+		"vite-plus": "^0.1.16"
 	}
 }
