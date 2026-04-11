@@ -1,0 +1,9 @@
+{# @var block \craft\elements\Entry #}
+
+{% embed 'sections/sitemap.twig' with {
+	anchor: block.id,
+	headline: block.header.headline,
+	level: block.header.headline_level.value,
+	text: block.text,
+	root: block.pages.one().id,
+} only %}{% endembed %}

@@ -1,0 +1,31 @@
+{# @var anchor string #}
+{# @var headline string #}
+{# @var level integer #}
+{# @var text string #}
+
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set anchor = anchor|default %}
+{% set headline = headline|default %}
+{% set level = level|default %}
+{% set text = text|default %}
+{# </editor-fold> #}
+
+{% embed 'components/section.twig' with {
+	anchor: anchor,
+} %}
+	{% block content %}
+		{% embed 'components/headline.twig' with {
+			text: headline,
+			level: level,
+		} only %}{% endembed %}
+
+		{% if text %}
+			{% embed 'components/text.twig' with {
+				text: text,
+			} only %}{% endembed %}
+		{% endif %}
+
+		{% block addition %}
+		{% endblock %}
+	{% endblock %}
+{% endembed %}

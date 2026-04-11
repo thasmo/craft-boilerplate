@@ -1,18 +1,12 @@
 {# @var block \craft\elements\Entry #}
 
-{% embed 'components/section.twig' with {
+{% embed 'sections/text.twig' with {
 	anchor: block.id,
-} %}
-	{% block content %}
-		{% embed 'components/headline.twig' with {
-			text: block.header.headline,
-			level: block.header.headline_level.value,
-		} only %}{% endembed %}
-
-		{% embed 'components/text.twig' with {
-			text: block.text,
-		} only %}{% endembed %}
-
+	headline: block.header.headline,
+	level: block.header.headline_level.value,
+	text: block.text,
+} only %}
+	{% block addition %}
 		{% embed 'components/button.twig' with {
 			label: 'regular button',
 			url: '/',

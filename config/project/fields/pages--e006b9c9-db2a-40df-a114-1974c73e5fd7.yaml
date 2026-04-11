@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: pages
+instructions: null
+name: Pages
+searchable: true
+settings:
+  allowSelfRelations: true
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: false
+  showUnpermittedEntries: false
+  showUnpermittedSections: false
+  sources:
+    - 'section:1f3da7ed-2af0-40f7-96e4-6a943237d0aa' # Pages
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list-inline
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

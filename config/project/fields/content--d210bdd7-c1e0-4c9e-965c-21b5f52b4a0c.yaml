@@ -16,6 +16,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 55628bbc-83ff-4ee4-9656-37a117d650d8 # Sitemap
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

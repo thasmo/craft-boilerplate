@@ -1,0 +1,15 @@
+{# @var root int #}
+
+{# <editor-fold desc="defaults" defaultstate="collapsed"> #}
+{% set root = root|integer %}
+{# </editor-fold> #}
+
+{% set query = craft
+	.entries()
+	.section('pages')
+	.descendantOf(root)
+	.cache()
+%}
+
+{% block query %}
+{% endblock %}
