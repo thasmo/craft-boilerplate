@@ -42,7 +42,7 @@ importers:
         version: 6.0.6(vite@7.3.2(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))(vue@3.5.32(typescript@6.0.2))
       '@voidzero-dev/vite-plus-core':
         specifier: ^0.1.16
-        version: 0.1.18(@types/node@25.5.0)(esbuild@0.27.7)(jiti@2.6.1)(typescript@6.0.2)(yaml@2.8.3)
+        version: 0.1.19(@types/node@25.5.0)(esbuild@0.27.7)(jiti@2.6.1)(typescript@6.0.2)(yaml@2.8.3)
       concurrently:
         specifier: ^9.1.0
         version: 9.2.1
@@ -1276,6 +1276,10 @@ packages:
     resolution: {integrity: sha512-sSg6n37J3w3mM4odFvRqzQENf6+qxKnvStr/gU0FgRRg1VE/4MqryLd9PJmE0a7K5xlDfbrctBtSagaFH6ij9Q==}
     engines: {node: ^20.19.0 || >=22.12.0}
 
+  '@oxc-project/runtime@0.126.0':
+    resolution: {integrity: sha512-oksjxfqDNmIYMGlIgLzYgnz5YjZax27RtQezsPpKEGo9AC5LOaIGHsivCCeaAWdCtPnRyjZXM/7svreCC8kZVQ==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+
   '@oxc-project/types@0.124.0':
     resolution: {integrity: sha512-VBFWMTBvHxS11Z5Lvlr3IWgrwhMTXV+Md+EQF0Xf60+wAdsGFTBx7X7K/hP4pi8N7dcm1RvcHwDxZ16Qx8keUg==}
 
@@ -2215,6 +2219,66 @@ packages:
       '@arethetypeswrong/core': ^0.18.1
       '@tsdown/css': 0.21.8
       '@tsdown/exe': 0.21.8
+      '@types/node': ^20.19.0 || >=22.12.0
+      '@vitejs/devtools': ^0.1.0
+      esbuild: ^0.27.0 || ^0.28.0
+      jiti: '>=1.21.0'
+      less: ^4.0.0
+      publint: ^0.3.0
+      sass: ^1.70.0
+      sass-embedded: ^1.70.0
+      stylus: '>=0.54.8'
+      sugarss: ^5.0.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      typescript: ^5.0.0 || ^6.0.0
+      unplugin-unused: ^0.5.0
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@arethetypeswrong/core':
+        optional: true
+      '@tsdown/css':
+        optional: true
+      '@tsdown/exe':
+        optional: true
+      '@types/node':
+        optional: true
+      '@vitejs/devtools':
+        optional: true
+      esbuild:
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      publint:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      typescript:
+        optional: true
+      unplugin-unused:
+        optional: true
+      yaml:
+        optional: true
+
+  '@voidzero-dev/vite-plus-core@0.1.19':
+    resolution: {integrity: sha512-BTmz50juSDolIN4Vtu5iVaPONV1XSrMB5V+9IoBhhxdogfvp7PBhaHuAcPjTN2RTVowhLZXoo8mn+aHjq//bkw==}
+    engines: {node: ^20.19.0 || >=22.12.0}
+    peerDependencies:
+      '@arethetypeswrong/core': ^0.18.1
+      '@tsdown/css': 0.21.9
+      '@tsdown/exe': 0.21.9
       '@types/node': ^20.19.0 || >=22.12.0
       '@vitejs/devtools': ^0.1.0
       esbuild: ^0.27.0 || ^0.28.0
@@ -5661,6 +5725,8 @@ snapshots:
 
   '@oxc-project/runtime@0.124.0': {}
 
+  '@oxc-project/runtime@0.126.0': {}
+
   '@oxc-project/types@0.124.0': {}
 
   '@oxc-project/types@0.126.0': {}
@@ -6412,6 +6478,20 @@ snapshots:
     dependencies:
       '@oxc-project/runtime': 0.124.0
       '@oxc-project/types': 0.124.0
+      lightningcss: 1.32.0
+      postcss: 8.5.10
+    optionalDependencies:
+      '@types/node': 25.5.0
+      esbuild: 0.27.7
+      fsevents: 2.3.3
+      jiti: 2.6.1
+      typescript: 6.0.2
+      yaml: 2.8.3
+
+  '@voidzero-dev/vite-plus-core@0.1.19(@types/node@25.5.0)(esbuild@0.27.7)(jiti@2.6.1)(typescript@6.0.2)(yaml@2.8.3)':
+    dependencies:
+      '@oxc-project/runtime': 0.126.0
+      '@oxc-project/types': 0.126.0
       lightningcss: 1.32.0
       postcss: 8.5.10
     optionalDependencies:
