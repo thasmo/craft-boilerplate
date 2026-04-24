@@ -1,4 +1,4 @@
-dateModified: 1775905873
+dateModified: 1777754750
 elementSources:
   craft\elements\Entry:
     -
@@ -81,19 +81,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  ping:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      enabledChannels:
-        - panel
-        - ''
-        - ''
-      enabledTopics:
-        - 'ping:message'
-        - ''
-        - ''
   skip:
     edition: standard
     enabled: true
