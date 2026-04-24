@@ -20,3 +20,10 @@ ckeditor
 trufflesecurity
 voidzero
 libc
+isready
+shivammathur
+mbstring
+bcmath
+pixelandtonic
+thasmo
+numstat
