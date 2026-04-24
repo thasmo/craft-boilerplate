@@ -1,0 +1,72 @@
+name: CRAFT
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - composer.json
+      - composer.lock
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    name: migrate craft
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: db
+          POSTGRES_USER: db
+          POSTGRES_PASSWORD: db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+    env:
+      CRAFT_EDITION: pro
+      CRAFT_ENVIRONMENT: production
+      CRAFT_SECURITY_KEY: craft
+      CRAFT_DB_DRIVER: pgsql
+      CRAFT_DB_SERVER: 127.0.0.1
+      CRAFT_DB_PORT: 5432
+      CRAFT_DB_DATABASE: db
+      CRAFT_DB_USER: db
+      CRAFT_DB_PASSWORD: db
+      CRAFT_DB_SCHEMA: public
+      CRAFT_DB_TABLE_PREFIX: ''
+      CRAFT_USE_EMAIL_AS_USERNAME: false
+      PRIMARY_SITE_URL: http://localhost/
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: install php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: pdo, pdo_pgsql, pgsql
+          coverage: none
+      - name: install dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: remove env file
+        run: rm -f .env
+      - name: setup craft
+        run: php craft install --no-interaction --email="admin@example.com" --password="password" --site-name="Craft" --site-url="$PRIMARY_SITE_URL" --language="en-US"
+      - name: run migrations
+        run: php craft migrate/all --no-interaction
+      - name: write project config
+        run: php craft project-config/write --no-interaction
+      - name: commit project config changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: update project config after craft migrations'
+          branch: ${{ github.head_ref }}

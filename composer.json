@@ -8,12 +8,12 @@
 	],
 	"type": "project",
 	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"require": {
 		"craftcms/ckeditor": "^5.4.0",
 		"craftcms/cms": "^5.0.0",
 		"nystudio107/craft-vite": "^5.0",
 		"somehow-digital/craft-lettermint": "^v1.0.1",
-		"somehow-digital/craft-ping": "^1.0@dev",
 		"somehow-digital/craft-skip": "^v1.0.0",
 		"somehow-digital/craft-stack": "^v1.0.0",
 		"vlucas/phpdotenv": "^5.4.0",
