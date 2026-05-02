@@ -19,3 +19,8 @@ fontshare
 ckeditor
 trufflesecurity
 voidzero
+isready
+shivammathur
+mbstring
+bcmath
+pixelandtonic
