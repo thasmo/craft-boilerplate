@@ -2,7 +2,7 @@ baseUrl: $SITE_ALPHA_URL
 enabled: true
 handle: alpha
 hasUrls: true
-language: $SITE_ALPHA_LANGUAGE
+language: en
 name: ALPHA
 primary: true
 siteGroup: 74f78f86-64ac-4d6c-aeef-f4b85077ed91 # SINGLE
