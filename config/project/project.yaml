@@ -81,19 +81,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.0.0
-  ping:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
-    settings:
-      enabledChannels:
-        - panel
-        - ''
-        - ''
-      enabledTopics:
-        - 'ping:message'
-        - ''
-        - ''
   skip:
     edition: standard
     enabled: true

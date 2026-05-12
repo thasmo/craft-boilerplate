@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "20822ffde966a5e6c1a1fa4559c00a6b",
+    "content-hash": "055e170b9c1d427a28869e0631bc9b3d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4905,63 +4905,6 @@
                 "source": "https://github.com/somehow-digital/craft-lettermint"
             },
             "time": "2026-03-28T17:15:08+00:00"
-        },
-        {
-            "name": "somehow-digital/craft-ping",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "./plugins/somehow-digital-craft-ping",
-                "reference": "f1b8d4c41b35a3028a635f0340196b2071939c55"
-            },
-            "require": {
-                "craftcms/cms": "^5.8.0",
-                "php": "^8.2"
-            },
-            "require-dev": {
-                "roave/security-advisories": "dev-latest"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "Ping",
-                "handle": "ping",
-                "class": "SomehowDigital\\Craft\\Ping\\Ping",
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "SomehowDigital\\Craft\\Ping\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Thomas Deinhamer",
-                    "email": "code@thasmo.dev",
-                    "homepage": "https://thasmo.com/"
-                }
-            ],
-            "description": "Flexible panel notifications for Craft CMS.",
-            "homepage": "https://somehow.digital/",
-            "keywords": [
-                "craft",
-                "craftcms",
-                "notification",
-                "ping"
-            ],
-            "support": {
-                "email": "support@somehow.digital",
-                "docs": "https://github.com/somehow-digital/craft-ping",
-                "source": "https://github.com/somehow-digital/craft-ping",
-                "issues": "https://github.com/somehow-digital/craft-ping/issues"
-            },
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "somehow-digital/craft-skip",
@@ -9923,9 +9866,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "somehow-digital/craft-ping": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
