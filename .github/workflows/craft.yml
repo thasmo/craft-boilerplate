@@ -1,0 +1,75 @@
+name: CRAFT
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - composer.json
+      - composer.lock
+
+permissions:
+  contents: write
+
+jobs:
+  configuration:
+    name: update configuration
+    runs-on: ubuntu-latest
+    env:
+      CRAFT_DB_SERVER: 127.0.0.1
+      REDIS_HOSTNAME: 127.0.0.1
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: db
+          POSTGRES_USER: db
+          POSTGRES_PASSWORD: db
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+      redis:
+        image: redis:7
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+      - name: install php
+        uses: shivammathur/setup-php@v2
+        with:
+          extensions: pdo_pgsql
+      - name: define environment
+        run: cp .env.development .env
+      - name: install dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader
+      - name: install craft
+        run: php craft install --interactive=0 --email=username@example.com --username=username --password=password
+      # - name: apply configuration
+      #   run: php craft project-config/apply --interactive=0 --force
+      - name: run migrations
+        run: php craft up --interactive=0 --no-backup=1
+      - name: commit configuration
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          CHANGED_LINES=$(git diff --numstat -- config/project/ | awk '{added+=$1; removed+=$2} END {print added+removed}')
+          if [ "${CHANGED_LINES:-0}" -lt 2 ]; then
+            echo "project config has less than 2 lines changed, skipping commit"
+            exit 0
+          fi
+          git add config/project/
+          git commit -m "chore: update project config"
+          git push https://x-access-token:${{ secrets.CRAFT_TOKEN || github.token }}@github.com/${{ github.repository }} HEAD:${{ github.head_ref }}
