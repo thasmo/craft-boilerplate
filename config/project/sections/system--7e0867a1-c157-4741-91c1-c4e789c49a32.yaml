@@ -5,6 +5,7 @@ entryTypes:
     uid: 1b5b6229-0f99-4c8a-84be-03bda866ff34 # Page
 handle: system
 maxAuthors: 1
+minAuthors: 1
 name: System
 previewTargets:
   -
