@@ -1,0 +1,1 @@
+0 * * * * IS_DDEV_PROJECT=true php /var/www/html/craft gc --delete-all-trashed=0 --interactive=0
