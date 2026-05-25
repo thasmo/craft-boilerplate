@@ -97,6 +97,9 @@ return [
 				'otp',
 			],
 		],
+		'gc' => [
+			'probability' => 0,
+		],
 		'log' => [
 			'traceLevel' => 10,
 		],
