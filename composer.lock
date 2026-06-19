@@ -612,16 +612,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.10.5",
+            "version": "5.10.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "f781aecea946641c1c66baa5cf4a39872f99e7c6"
+                "reference": "6a08356668f772f0a4d79769d3de83508cd4e21c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/f781aecea946641c1c66baa5cf4a39872f99e7c6",
-                "reference": "f781aecea946641c1c66baa5cf4a39872f99e7c6",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/6a08356668f772f0a4d79769d3de83508cd4e21c",
+                "reference": "6a08356668f772f0a4d79769d3de83508cd4e21c",
                 "shasum": ""
             },
             "require": {
@@ -630,6 +630,7 @@
                 "composer/semver": "^3.3.2",
                 "craftcms/plugin-installer": "~1.6.0",
                 "craftcms/server-check": "~5.1.0",
+                "craftcms/url-validator": "^1.0",
                 "creocoder/yii2-nested-sets": "~0.9.0",
                 "elvanto/litemoji": "~4.3.0",
                 "enshrined/svg-sanitize": "~0.22.0",
@@ -737,7 +738,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-06-02T18:34:00+00:00"
+            "time": "2026-06-18T01:14:32+00:00"
         },
         {
             "name": "craftcms/html-field",
@@ -885,6 +886,62 @@
                 "source": "https://github.com/craftcms/server-check"
             },
             "time": "2026-04-07T16:48:35+00:00"
+        },
+        {
+            "name": "craftcms/url-validator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/url-validator.git",
+                "reference": "75b44bc4d3f89feb9410b85d385f01210edd5eb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/url-validator/zipball/75b44bc4d3f89feb9410b85d385f01210edd5eb1",
+                "reference": "75b44bc4d3f89feb9410b85d385f01210edd5eb1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-filter": "*",
+                "php": "^8.0.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.29",
+                "nunomaduro/collision": "^8.1",
+                "pestphp/pest": "^3.0",
+                "phpstan/phpstan": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CraftCms\\UrlValidator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Validate URLs and IP addresses against SSRF, DNS rebinding, and cloud-metadata attacks.",
+            "homepage": "https://github.com/craftcms/url-validator",
+            "keywords": [
+                "IP",
+                "craftcms",
+                "security",
+                "ssrf",
+                "url",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/craftcms/url-validator/issues",
+                "source": "https://github.com/craftcms/url-validator/tree/1.0.0"
+            },
+            "time": "2026-06-15T17:29:09+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
