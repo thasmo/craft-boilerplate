@@ -9691,16 +9691,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "13.2.12",
+            "version": "13.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecsphp/ecs.git",
-                "reference": "a6cb7dbe021f36d0394daf01894a651211ea93b2"
+                "reference": "6d28a6dfef3e18ddc013ba68b121487cad2cf14c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/a6cb7dbe021f36d0394daf01894a651211ea93b2",
-                "reference": "a6cb7dbe021f36d0394daf01894a651211ea93b2",
+                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/6d28a6dfef3e18ddc013ba68b121487cad2cf14c",
+                "reference": "6d28a6dfef3e18ddc013ba68b121487cad2cf14c",
                 "shasum": ""
             },
             "require": {
@@ -9735,9 +9735,9 @@
                 "static analysis"
             ],
             "support": {
-                "source": "https://github.com/ecsphp/ecs/tree/13.2.12"
+                "source": "https://github.com/ecsphp/ecs/tree/13.2.13"
             },
-            "time": "2026-07-20T07:48:57+00:00"
+            "time": "2026-07-20T11:00:52+00:00"
         },
         {
             "name": "vincentlanglet/twig-cs-fixer",
