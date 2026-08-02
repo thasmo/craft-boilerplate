@@ -3344,16 +3344,16 @@
         },
         {
             "name": "nystudio107/craft-plugin-vite",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-plugin-vite.git",
-                "reference": "023ea9013f03ac8b15c9b800c66943ce4d02cf48"
+                "reference": "be94af85d2af14112072221cdd99bbc0cd13b00c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/023ea9013f03ac8b15c9b800c66943ce4d02cf48",
-                "reference": "023ea9013f03ac8b15c9b800c66943ce4d02cf48",
+                "url": "https://api.github.com/repos/nystudio107/craft-plugin-vite/zipball/be94af85d2af14112072221cdd99bbc0cd13b00c",
+                "reference": "be94af85d2af14112072221cdd99bbc0cd13b00c",
                 "shasum": ""
             },
             "require": {
@@ -3389,7 +3389,7 @@
             "support": {
                 "docs": "https://github.com/nystudio107/craft-plugin-vite/blob/v5/README.md",
                 "issues": "https://github.com/nystudio107/craft-plugin-vite/issues",
-                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/5.0.2"
+                "source": "https://github.com/nystudio107/craft-plugin-vite/tree/5.0.3"
             },
             "funding": [
                 {
@@ -3397,29 +3397,29 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-14T02:02:01+00:00"
+            "time": "2026-08-01T20:20:58+00:00"
         },
         {
             "name": "nystudio107/craft-vite",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-vite.git",
-                "reference": "a2eaa9beb4abf1add99e8fc7892e8df57c6b49e8"
+                "reference": "0b812aec93a34c2b81987958ab678120a85dd522"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/a2eaa9beb4abf1add99e8fc7892e8df57c6b49e8",
-                "reference": "a2eaa9beb4abf1add99e8fc7892e8df57c6b49e8",
+                "url": "https://api.github.com/repos/nystudio107/craft-vite/zipball/0b812aec93a34c2b81987958ab678120a85dd522",
+                "reference": "0b812aec93a34c2b81987958ab678120a85dd522",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.0.0",
-                "nystudio107/craft-plugin-vite": "^5.0.2",
+                "nystudio107/craft-plugin-vite": "^5.0.3",
                 "php": "^8.2"
             },
             "require-dev": {
-                "craftcms/cloud": "^2.0.0",
+                "craftcms/cloud": "^2.0.0 || ^3.0.0",
                 "craftcms/ecs": "dev-main",
                 "craftcms/phpstan": "dev-main",
                 "craftcms/rector": "dev-main"
@@ -3465,7 +3465,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-08-14T02:05:18+00:00"
+            "time": "2026-08-01T20:38:21+00:00"
         },
         {
             "name": "oscarotero/html-parser",
