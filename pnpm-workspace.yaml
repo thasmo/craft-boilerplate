@@ -5,6 +5,17 @@ enablePrePostScripts: false
 ignorePatchFailures: false
 optimisticRepeatInstall: true
 shellEmulator: true
+supportedArchitectures:
+  cpu:
+    - x64
+    - arm64
+  libc:
+    - glibc
+    - musl
+  os:
+    - win32
+    - darwin
+    - linux
 trustPolicy: no-downgrade
 overrides:
   vite: npm:@voidzero-dev/vite-plus-core@latest
