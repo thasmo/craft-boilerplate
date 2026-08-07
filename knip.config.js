@@ -1,5 +1,5 @@
 export default {
-	entry: ['assets/sites/*/main.ts', 'vite.config.js'],
+	entry: ['assets/sites/*/main.ts'],
 	ignore: ['plugins/**'],
 	ignoreDependencies: ['@voidzero-dev/vite-plus-core', 'lint-staged'],
 	typescript: {
