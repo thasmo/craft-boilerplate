@@ -14,17 +14,11 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: setup package manager
-        uses: pnpm/action-setup@v6
+      - name: setup vite+
+        uses: voidzero-dev/setup-vp@v1
         with:
-          run_install: false
-      - name: install node
-        uses: actions/setup-node@v7
-        with:
-          cache: pnpm
-          check-latest: true
+          run-install: true
+          cache: true
           node-version-file: .nvmrc
-      - name: install dependencies
-        run: pnpm install
       - name: lint title
-        run: echo "${{ github.event.pull_request.title }}" | pnpm exec commitlint --extends @somehow-digital/commitlint-config/conventional
+        run: echo "${{ github.event.pull_request.title }}" | vp exec commitlint --extends @somehow-digital/commitlint-config/conventional
