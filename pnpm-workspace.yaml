@@ -5,20 +5,9 @@ enablePrePostScripts: false
 ignorePatchFailures: false
 optimisticRepeatInstall: true
 shellEmulator: true
-supportedArchitectures:
-  cpu:
-    - x64
-    - arm64
-  libc:
-    - glibc
-    - musl
-  os:
-    - win32
-    - darwin
-    - linux
 trustPolicy: no-downgrade
 overrides:
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vitest: 4.1.10
 trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install
