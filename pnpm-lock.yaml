@@ -54,7 +54,7 @@ importers:
         version: 9.1.7
       knip:
         specifier: ^6.0.0
-        version: 6.32.0
+        version: 6.32.1
       lint-staged:
         specifier: ^17.0.0
         version: 17.3.0
@@ -3364,8 +3364,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  knip@6.32.0:
-    resolution: {integrity: sha512-KDX9OmmOFmlvmxTkrx6Z0GHISMut+pXMSKR8eg84bovaxJKx2NdQD4JYCXveSbvieRe107W6vCD2xCpmz0qBYA==}
+  knip@6.32.1:
+    resolution: {integrity: sha512-mIiIHMTJVUgSlz0mxEgPt7wg8DmfbCp1Txqab3WpbMCJF7YHvHtC9jeAHHXfISMl72N8WzhyG71SQlaqCOGZtg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
 
@@ -4066,8 +4066,8 @@ packages:
   ufo@1.6.4:
     resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
 
-  unbash@4.0.6:
-    resolution: {integrity: sha512-YGBMSVG/WrA2vgaZbXVvxrGgoMcWZecyyS4foGt8clbtY7s1nIKNmt7Z9LR74XE6FkYTSqDmKk2lIOhOjIvmrw==}
+  unbash@4.0.10:
+    resolution: {integrity: sha512-b7zoBQvpWp0vuN5q2vK2RRBR2SvuruQAs50DApdDveBSn3eSYd84IaHodFqQIMlvY9K2VnyBUEXgwOBuGU9GBg==}
     engines: {node: '>=14'}
 
   unconfig-core@7.5.0:
@@ -7471,7 +7471,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  knip@6.32.0:
+  knip@6.32.1:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.5)
       formatly: 0.3.0
@@ -7483,7 +7483,7 @@ snapshots:
       smol-toml: 1.7.1
       strip-json-comments: 5.0.3
       tinyglobby: 0.2.17
-      unbash: 4.0.6
+      unbash: 4.0.10
       yaml: 2.9.0
       zod: 4.4.3
 
@@ -8392,7 +8392,7 @@ snapshots:
 
   ufo@1.6.4: {}
 
-  unbash@4.0.6: {}
+  unbash@4.0.10: {}
 
   unconfig-core@7.5.0:
     dependencies:
