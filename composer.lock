@@ -544,21 +544,21 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "5.6.1",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/ckeditor.git",
-                "reference": "a9bcc37d02b069d9ed9a08242f470588d58b1400"
+                "reference": "8d33b8aad2fcebaf5df9a81f5b405127b12fd881"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/a9bcc37d02b069d9ed9a08242f470588d58b1400",
-                "reference": "a9bcc37d02b069d9ed9a08242f470588d58b1400",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/8d33b8aad2fcebaf5df9a81f5b405127b12fd881",
+                "reference": "8d33b8aad2fcebaf5df9a81f5b405127b12fd881",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.10.0",
-                "craftcms/html-field": "^3.5.0",
+                "craftcms/html-field": "^3.6.0",
                 "embed/embed": "^4.4",
                 "nystudio107/craft-code-editor": ">=1.0.8 <=1.0.13 || ^1.0.16",
                 "php": "^8.2"
@@ -605,7 +605,7 @@
                 "rss": "https://github.com/craftcms/ckeditor/commits/5.x.atom",
                 "source": "https://github.com/craftcms/ckeditor"
             },
-            "time": "2026-05-13T22:11:11+00:00"
+            "time": "2026-08-10T20:50:33+00:00"
         },
         {
             "name": "craftcms/cms",
@@ -739,16 +739,16 @@
         },
         {
             "name": "craftcms/html-field",
-            "version": "3.5.1",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/html-field.git",
-                "reference": "b4e1ae3f020d6081cfe3abf653f663da744c4cec"
+                "reference": "8639205370ca671662fdd421ec1df5051d4f179d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/html-field/zipball/b4e1ae3f020d6081cfe3abf653f663da744c4cec",
-                "reference": "b4e1ae3f020d6081cfe3abf653f663da744c4cec",
+                "url": "https://api.github.com/repos/craftcms/html-field/zipball/8639205370ca671662fdd421ec1df5051d4f179d",
+                "reference": "8639205370ca671662fdd421ec1df5051d4f179d",
                 "shasum": ""
             },
             "require": {
@@ -787,7 +787,7 @@
                 "rss": "https://github.com/craftcms/html-field/commits/main.atom",
                 "source": "https://github.com/craftcms/html-field"
             },
-            "time": "2026-03-19T18:11:31+00:00"
+            "time": "2026-08-10T15:57:06+00:00"
         },
         {
             "name": "craftcms/plugin-installer",
