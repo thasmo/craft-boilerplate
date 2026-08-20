@@ -8,6 +8,6 @@ shellEmulator: true
 trustPolicy: no-downgrade
 overrides:
   vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: 4.1.10
+  vitest: 4.1.11
 trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install
