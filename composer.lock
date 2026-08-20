@@ -609,16 +609,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "5.10.13",
+            "version": "5.10.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "0b18123e8c3be1edcf6f785e9925e1b1007ce8c5"
+                "reference": "6804f92fbdd93c3a3fb40f15bcd76a406e97634d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/0b18123e8c3be1edcf6f785e9925e1b1007ce8c5",
-                "reference": "0b18123e8c3be1edcf6f785e9925e1b1007ce8c5",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/6804f92fbdd93c3a3fb40f15bcd76a406e97634d",
+                "reference": "6804f92fbdd93c3a3fb40f15bcd76a406e97634d",
                 "shasum": ""
             },
             "require": {
@@ -735,7 +735,7 @@
                 "rss": "https://github.com/craftcms/cms/releases.atom",
                 "source": "https://github.com/craftcms/cms"
             },
-            "time": "2026-08-04T16:59:03+00:00"
+            "time": "2026-08-18T20:38:41+00:00"
         },
         {
             "name": "craftcms/html-field",
