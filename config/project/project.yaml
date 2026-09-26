@@ -98,7 +98,7 @@ system:
   live: true
   name: $APP_SYSTEM_NAME
   retryDuration: null
-  schemaVersion: 5.10.0.0
+  schemaVersion: 5.11.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
