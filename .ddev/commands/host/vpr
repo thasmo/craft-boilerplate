@@ -1,0 +1,8 @@
+#!/bin/bash
+## #ddev-generated
+## Description: Run Vite+ run (vpr) - shorthand for "vp run" in the ddev-viteplus service container
+## Usage: vpr <task> [args]
+## Example: ddev vpr build\nddev vpr test
+set -euo pipefail
+
+ddev exec -s viteplus -- vpr "$@"

@@ -1,0 +1,8 @@
+#!/bin/bash
+## #ddev-generated
+## Description: Run Vite+ exec (vpx) - shorthand for "vp exec" in the ddev-viteplus service container
+## Usage: vpx <package|binary> [args]
+## Example: ddev vpx eslint .\nddev vpx create-vite
+set -euo pipefail
+
+ddev exec -s viteplus -- vpx "$@"

@@ -2,12 +2,37 @@ allowBuilds:
   esbuild: true
 blockExoticSubdeps: true
 enablePrePostScripts: false
-ignorePatchFailures: false
 optimisticRepeatInstall: true
 shellEmulator: true
 trustPolicy: no-downgrade
 overrides:
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: 5.0.1
+  vite@*: 'catalog:'
 trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install
+catalog:
+  '@commitlint/cli': ^21.0.0
+  '@somehow-digital/commitlint-config': ^1.0.0
+  '@somehow-digital/cspell-dictionary': ^2.7.0
+  '@somehow-digital/eslint-config': ^5.0.0
+  '@somehow-digital/typescript-config': ^3.0.0
+  '@somehow-digital/unocss-preset': ^2.1.0
+  '@unocss/preset-web-fonts': ^66.6.7
+  '@vitejs/plugin-vue': ^6.0.2
+  concurrently: ^10.0.0
+  cspell: ^10.0.0
+  eslint: ^10.0.0
+  husky: ^9.1.7
+  knip: ^6.0.0
+  lint-staged: ^17.0.0
+  tinyglobby: ^0.2.15
+  unocss: ^66.5.9
+  vite: npm:@voidzero-dev/vite-plus-core@1.0.0-rc.1
+  vite-plugin-restart: ^2.0.0
+  vite-plugin-vue-devtools: ^8.0.5
+  vite-plus: 1.0.0-rc.1
+  vue: ^3.5.25
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'
