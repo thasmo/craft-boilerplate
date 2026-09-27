@@ -1,14 +1,18 @@
 name: viteplus
 repository: somehow-digital/ddev-viteplus
-version: v1.0.3
-install_date: "2026-04-10T20:16:48+02:00"
+version: v1.1.0
+install_date: "2026-09-27T14:19:09+02:00"
 project_files:
     - docker-compose.viteplus.yaml
     - commands/host/vp
+    - commands/host/vpr
+    - commands/host/vpx
     - commands/host/autocomplete/vp
 global_files: []
 removal_actions:
     - |
       rm -f docker-compose.viteplus.yaml
       rm -f commands/host/vp
+      rm -f commands/host/vpr
+      rm -f commands/host/vpx
       rm -f commands/host/autocomplete/vp

@@ -3,7 +3,7 @@
 ## Description: Run Vite+ (vp) in the ddev-viteplus service container
 ## Usage: vp <command> [args]
 ## Example: ddev vp install\nddev vp dev
-## AutocompleteTerms: ["add","build","cache","check","config","create","dedupe","dev","dlx","env","exec","fmt","help","implode","info","install","link","lint","list","migrate","outdated","pack","pm","preview","remove","run","staged","test","unlink","update","upgrade","why"]
+## AutocompleteTerms: ["add","build","cache","check","config","create","dedupe","dev","dlx","env","exec","explain","fmt","format","help","i","implode","info","install","link","lint","list","ln","ls","migrate","node","outdated","pack","pm","preview","rebuild","remove","rm","run","show","staged","test","un","uninstall","unlink","up","update","upgrade","view","why"]
 set -euo pipefail
 
 ddev exec -s viteplus -- vp "$@"

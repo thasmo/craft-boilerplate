@@ -2,7 +2,7 @@
 services:
   viteplus:
     container_name: ddev-${DDEV_SITENAME}-viteplus
-    image: ghcr.io/somehow-digital/viteplus:latest
+    image: ghcr.io/voidzero-dev/vite-plus:latest
     command: tail -f /dev/null
     restart: no
     working_dir: /app
@@ -19,6 +19,7 @@ services:
     environment:
       VIRTUAL_HOST: ${DDEV_HOSTNAME}
       HTTPS_EXPOSE: "5173:5173"
+      VP_HOME: /app/node_modules/.cache/vite-plus
     x-ddev:
       describe-url-port: "https://${DDEV_HOSTNAME}:5173"
       describe-info: "Vite+ dev server container. Run: ddev vp dev"
