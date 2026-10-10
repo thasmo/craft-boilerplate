@@ -1,6 +1,6 @@
 applications:
   panel:
-    type: 'php:8.4'
+    type: 'php:8.5'
     container_profile: HIGH_CPU
     source:
       root: /
@@ -71,7 +71,7 @@ applications:
           start: |
             php craft gc/run --interactive=0
   site:
-    type: 'php:8.4'
+    type: 'php:8.5'
     container_profile: HIGH_CPU
     source:
       root: /
