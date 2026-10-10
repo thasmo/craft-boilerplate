@@ -1,4 +1,4 @@
-dateModified: 1782047934
+dateModified: 1791634602
 elementSources:
   craft\elements\Entry:
     -
@@ -95,11 +95,11 @@ plugins:
     enabled: true
     schemaVersion: 1.0.0
 system:
-  live: true
+  live: $CRAFT_IS_SYSTEM_LIVE
   name: $APP_SYSTEM_NAME
   retryDuration: null
   schemaVersion: 5.11.0.2
-  timeZone: America/Los_Angeles
+  timeZone: $CRAFT_TIMEZONE
 users:
   allowPublicRegistration: false
   defaultGroup: null
