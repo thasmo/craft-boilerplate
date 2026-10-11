@@ -29,7 +29,7 @@ catalogs:
       version: 66.10.5
     '@vitejs/plugin-vue':
       specifier: ^6.0.2
-      version: 6.0.9
+      version: 6.0.10
     concurrently:
       specifier: ^10.0.0
       version: 10.0.6
@@ -104,7 +104,7 @@ importers:
         version: 66.10.5
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
-        version: 6.0.9(@voidzero-dev/vite-plus-core@1.1.0(@types/node@26.6.3)(jiti@2.7.0)(typescript@5.9.3)(yaml@2.9.1))(vue@3.5.43(typescript@5.9.3))
+        version: 6.0.10(@voidzero-dev/vite-plus-core@1.1.0(@types/node@26.6.3)(jiti@2.7.0)(typescript@5.9.3)(yaml@2.9.1))(vue@3.5.43(typescript@5.9.3))
       concurrently:
         specifier: 'catalog:'
         version: 10.0.6
@@ -1933,12 +1933,12 @@ packages:
     peerDependencies:
       vite: ^5.0.0-0 || ^6.0.0-0 || ^7.0.0-0 || ^8.0.0-0
 
-  '@vitejs/plugin-vue@6.0.9':
-    resolution: {integrity: sha512-rD/MORlhaZMlXWW0rEn4FB4wMinWC0z/D7Ye160S5+Rs1mC8ZDAdcDp4SjKfUhG5t8q1ktcPVw4xuTkPRlzrSA==}
+  '@vitejs/plugin-vue@6.0.10':
+    resolution: {integrity: sha512-b80aUQh3n+qEzzZm5oQp3rT2QImeCx58K6eFl/RkJ3d65KW0kTuv5lNsLRVAjbW9YRUpo/wzmvzMgV34bTAItA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
-      vue: ^3.2.25
+      vue: ^3.2.25 || ^3.6.0-rc.10
 
   '@vitest/browser-preview@5.0.3':
     resolution: {integrity: sha512-jfnEBv5yDRPR1MeiTlTW5bcZoPsiI7MBhpZR8IJiSxVhdK6Pa4gPk3tLHTRxVHy24kkWxY2TnUbnszU3J1bQJw==}
@@ -6048,7 +6048,7 @@ snapshots:
       - ocache
       - srvx
 
-  '@vitejs/plugin-vue@6.0.9(@voidzero-dev/vite-plus-core@1.1.0(@types/node@26.6.3)(jiti@2.7.0)(typescript@5.9.3)(yaml@2.9.1))(vue@3.5.43(typescript@5.9.3))':
+  '@vitejs/plugin-vue@6.0.10(@voidzero-dev/vite-plus-core@1.1.0(@types/node@26.6.3)(jiti@2.7.0)(typescript@5.9.3)(yaml@2.9.1))(vue@3.5.43(typescript@5.9.3))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: '@voidzero-dev/vite-plus-core@1.1.0(@types/node@26.6.3)(jiti@2.7.0)(typescript@5.9.3)(yaml@2.9.1)'
