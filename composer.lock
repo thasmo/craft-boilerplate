@@ -10095,16 +10095,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "13.3.15",
+            "version": "13.3.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ecsphp/ecs.git",
-                "reference": "4a975bfa3cee8b4ddb3b1fae9934e8ffde155271"
+                "reference": "3b77ce0f3d98d6b6467dcc1ff76309fa2b73fe24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/4a975bfa3cee8b4ddb3b1fae9934e8ffde155271",
-                "reference": "4a975bfa3cee8b4ddb3b1fae9934e8ffde155271",
+                "url": "https://api.github.com/repos/ecsphp/ecs/zipball/3b77ce0f3d98d6b6467dcc1ff76309fa2b73fe24",
+                "reference": "3b77ce0f3d98d6b6467dcc1ff76309fa2b73fe24",
                 "shasum": ""
             },
             "require": {
@@ -10137,10 +10137,10 @@
             ],
             "support": {
                 "issues": "https://github.com/ecsphp/ecs/issues",
-                "source": "https://github.com/ecsphp/ecs/tree/13.3.15"
+                "source": "https://github.com/ecsphp/ecs/tree/13.3.16"
             },
-            "time": "2026-11-07T20:02:40+00:00",
-            "published-time": "2026-11-07T20:03:48+00:00"
+            "time": "2026-11-12T11:11:39+00:00",
+            "published-time": "2026-11-12T11:11:47+00:00"
         },
         {
             "name": "vincentlanglet/twig-cs-fixer",
