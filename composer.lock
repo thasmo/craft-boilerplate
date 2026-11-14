@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7c564e068bb507058250f6d981a8012",
+    "content-hash": "a673832568efdabee62155bfd04e1589",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2621,6 +2621,67 @@
             "published-time": "2026-10-28T08:38:21+00:00"
         },
         {
+            "name": "lettermint/lettermint-php",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lettermint/lettermint-php.git",
+                "reference": "7968451dfde51991881e398ed6621fd74cf2ff89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lettermint/lettermint-php/zipball/7968451dfde51991881e398ed6621fd74cf2ff89",
+                "reference": "7968451dfde51991881e398ed6621fd74cf2ff89",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.15.2 || ^8.0.1",
+                "php": "^8.2",
+                "psr/http-message": "^1.1 || ^2.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.14",
+                "pestphp/pest": "^3.0 || ^4.0",
+                "phpstan/extension-installer": "^1.3 || ^2.0",
+                "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lettermint\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bjarn Bronsveld",
+                    "email": "bjarn@lettermint.co",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Official Lettermint PHP SDK: send email, manage the Team API and verify webhooks.",
+            "homepage": "https://github.com/lettermint/lettermint-php",
+            "keywords": [
+                "email",
+                "lettermint",
+                "lettermint-php",
+                "php",
+                "sdk",
+                "transactional email",
+                "webhooks"
+            ],
+            "support": {
+                "issues": "https://github.com/lettermint/lettermint-php/issues",
+                "source": "https://github.com/lettermint/lettermint-php/tree/3.3.0"
+            },
+            "time": "2026-10-30T08:37:18+00:00",
+            "published-time": "2026-10-30T11:23:49+00:00"
+        },
+        {
             "name": "lettermint/symfony-mailer",
             "version": "1.1.0",
             "source": {
@@ -5098,36 +5159,63 @@
         },
         {
             "name": "somehow-digital/craft-lettermint",
-            "version": "v2.0.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/somehow-digital/craft-lettermint.git",
-                "reference": "a0e25a9f06445e0cc26949ebc74ddecb8d6f5263"
+                "reference": "61366ac0436eb2b72eab462bd15fb2e9bb24e07e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/somehow-digital/craft-lettermint/zipball/a0e25a9f06445e0cc26949ebc74ddecb8d6f5263",
-                "reference": "a0e25a9f06445e0cc26949ebc74ddecb8d6f5263",
+                "url": "https://api.github.com/repos/somehow-digital/craft-lettermint/zipball/61366ac0436eb2b72eab462bd15fb2e9bb24e07e",
+                "reference": "61366ac0436eb2b72eab462bd15fb2e9bb24e07e",
                 "shasum": ""
             },
             "require": {
                 "craftcms/cms": "^5.8.0",
+                "ext-mbstring": "*",
+                "guzzlehttp/guzzle": "^7.2",
+                "lettermint/lettermint-php": "^3.3",
                 "lettermint/symfony-mailer": "^1.1.0",
-                "php": "^8.2"
+                "php": "^8.2",
+                "symfony/event-dispatcher": "^6.4 || ^7.0 || ^8.0",
+                "symfony/http-client": "^6.4 || ^7.4 || ^8.0",
+                "symfony/mailer": "^7.3 || ^8.0",
+                "symfony/mime": "^6.4 || ^7.0 || ^8.0"
+            },
+            "conflict": {
+                "yiisoft/yii2-composer": "<2.0.10"
             },
             "require-dev": {
                 "craftcms/phpstan": "dev-main",
+                "deptrac/deptrac": "^4.7",
+                "ergebnis/composer-normalize": "^2.56",
+                "guzzlehttp/psr7": "^2.0",
                 "pestphp/pest": "^3.0 || ^4.0",
+                "phpat/phpat": "^0.12.5",
                 "phpstan/phpstan": "^2.1",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "psr/http-message": "^1.1 || ^2.0",
+                "rector/rector": "^2.0",
                 "roave/security-advisories": "dev-latest",
-                "symplify/easy-coding-standard": "^13.0"
+                "shipmonk/composer-dependency-analyser": "^1.8",
+                "shipmonk/phpstan-rules": "^4.0",
+                "symfony/http-client-contracts": "^3.0",
+                "symplify/easy-coding-standard": "^13.0",
+                "tomasvotruba/cognitive-complexity": "^1.3",
+                "vincentlanglet/twig-cs-fixer": "^4.1"
             },
             "type": "craft-plugin",
             "extra": {
                 "name": "Lettermint",
                 "handle": "lettermint",
                 "branch-alias": {
-                    "dev-main": "2.x-dev"
+                    "dev-main": "3.x-dev"
+                },
+                "composer-normalize": {
+                    "indent-size": 1,
+                    "indent-style": "tab"
                 }
             },
             "autoload": {
@@ -5155,13 +5243,13 @@
                 "plugin"
             ],
             "support": {
-                "docs": "https://github.com/somehow-digital/craft-lettermint",
+                "docs": "https://craft-lettermint.somehow-digital.dev",
                 "email": "support@somehow.digital",
                 "issues": "https://github.com/somehow-digital/craft-lettermint/issues",
                 "source": "https://github.com/somehow-digital/craft-lettermint"
             },
-            "time": "2026-10-25T22:21:13+00:00",
-            "published-time": "2026-10-25T22:21:53+00:00"
+            "time": "2026-11-12T23:31:20+00:00",
+            "published-time": "2026-11-12T23:32:32+00:00"
         },
         {
             "name": "somehow-digital/craft-skip",
@@ -6011,16 +6099,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v7.4.22",
+            "version": "v7.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "9dd7ba9dc326b37d7f6e19588de79b5d91b20d66"
+                "reference": "ed012bfca0f7b45d97016efcdf9b0639c52a1722"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/9dd7ba9dc326b37d7f6e19588de79b5d91b20d66",
-                "reference": "9dd7ba9dc326b37d7f6e19588de79b5d91b20d66",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/ed012bfca0f7b45d97016efcdf9b0639c52a1722",
+                "reference": "ed012bfca0f7b45d97016efcdf9b0639c52a1722",
                 "shasum": ""
             },
             "require": {
@@ -6088,7 +6176,7 @@
                 "http"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v7.4.22"
+                "source": "https://github.com/symfony/http-client/tree/v7.4.23"
             },
             "funding": [
                 {
@@ -6108,8 +6196,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-26T21:52:50+00:00",
-            "published-time": "2026-10-28T18:19:52+00:00"
+            "time": "2026-11-04T08:27:22+00:00",
+            "published-time": "2026-11-04T11:28:32+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
