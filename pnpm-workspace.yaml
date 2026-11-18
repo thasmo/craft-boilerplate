@@ -33,3 +33,6 @@ catalog:
   vite-plugin-vue-devtools: ^8.0.5
   vite-plus: 1.7.0
   vue: ^3.5.25
+registries:
+  https://registry.vlt.io/upstream/npm/:
+    scopes: ['@']
