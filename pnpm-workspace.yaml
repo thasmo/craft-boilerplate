@@ -5,9 +5,11 @@ enablePrePostScripts: false
 optimisticRepeatInstall: true
 shellEmulator: true
 trustPolicy: no-downgrade
+trustPolicyIgnoreAfter: 10080
+trustPolicyExclude:
+  - tsrs@7.1.0-beta.tsrs2
 overrides:
   vite@*: 'catalog:'
-trustPolicyIgnoreAfter: 10080
 verifyDepsBeforeRun: install
 catalog:
   '@commitlint/cli': ^21.0.0
@@ -26,13 +28,8 @@ catalog:
   lint-staged: ^17.0.0
   tinyglobby: ^0.2.15
   unocss: ^66.5.9
-  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
   vite-plugin-restart: ^2.0.0
   vite-plugin-vue-devtools: ^8.0.5
-  vite-plus: 1.6.0
+  vite-plus: 1.7.0
   vue: ^3.5.25
-peerDependencyRules:
-  allowAny:
-    - vite
-  allowedVersions:
-    vite: '*'
