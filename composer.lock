@@ -10282,30 +10282,31 @@
         },
         {
             "name": "yiisoft/yii2-redis",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-redis.git",
-                "reference": "8409051409d7f56996e76382ab6d61d6e575cb4f"
+                "reference": "7f144e8e26303c85edeb4b30653be68ccac2cd02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-redis/zipball/8409051409d7f56996e76382ab6d61d6e575cb4f",
-                "reference": "8409051409d7f56996e76382ab6d61d6e575cb4f",
+                "url": "https://api.github.com/repos/yiisoft/yii2-redis/zipball/7f144e8e26303c85edeb4b30653be68ccac2cd02",
+                "reference": "7f144e8e26303c85edeb4b30653be68ccac2cd02",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "php": ">=7.4",
                 "predis/predis": "^3.4",
-                "yiisoft/yii2": "~2.0.54"
+                "yiisoft/yii2": "~2.0.55"
             },
             "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.95",
+                "mspirkov/yii2-rector": "^0.2",
                 "phpstan/phpstan": "^2.1",
                 "phpstan/phpstan-phpunit": "^2.0",
                 "phpunit/phpunit": "9.*",
-                "yiisoft/yii2-coding-standards": "^3.0",
-                "yiisoft/yii2-dev": "~2.0.50"
+                "rector/rector": "^2.6"
             },
             "type": "yii2-extension",
             "extra": {
@@ -10357,8 +10358,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-07T09:51:05+00:00",
-            "published-time": "2026-05-07T09:53:49+00:00"
+            "time": "2026-11-20T09:59:25+00:00",
+            "published-time": "2026-11-20T10:03:01+00:00"
         },
         {
             "name": "yiisoft/yii2-symfonymailer",
