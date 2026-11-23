@@ -37,7 +37,6 @@
 		"eslint": "catalog:",
 		"husky": "catalog:",
 		"knip": "catalog:",
-		"lint-staged": "catalog:",
 		"tinyglobby": "catalog:",
 		"unocss": "catalog:",
 		"vite": "catalog:",
