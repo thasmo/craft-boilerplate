@@ -59,5 +59,13 @@ export default defineConfig(({ command }) => {
 				vue: 'vue/dist/vue.esm-bundler.js',
 			},
 		},
+		staged: {
+			'**/*.*': [
+				[
+					'eslint',
+					'cspell --no-progress --no-must-find-files',
+				],
+			],
+		},
 	};
 });
