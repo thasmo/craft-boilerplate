@@ -558,16 +558,16 @@
         },
         {
             "name": "craftcms/ckeditor",
-            "version": "5.9.0",
+            "version": "5.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/ckeditor.git",
-                "reference": "ecd96fbd96cfb9685b60688230b26a8f3268e337"
+                "reference": "f52060aeb6e4c9e35532e50cb449c9bbc8a9a96b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/ecd96fbd96cfb9685b60688230b26a8f3268e337",
-                "reference": "ecd96fbd96cfb9685b60688230b26a8f3268e337",
+                "url": "https://api.github.com/repos/craftcms/ckeditor/zipball/f52060aeb6e4c9e35532e50cb449c9bbc8a9a96b",
+                "reference": "f52060aeb6e4c9e35532e50cb449c9bbc8a9a96b",
                 "shasum": ""
             },
             "require": {
@@ -619,8 +619,8 @@
                 "rss": "https://github.com/craftcms/ckeditor/commits/5.x.atom",
                 "source": "https://github.com/craftcms/ckeditor"
             },
-            "time": "2026-10-06T15:00:15+00:00",
-            "published-time": "2026-10-06T15:00:30+00:00"
+            "time": "2026-11-24T19:00:25+00:00",
+            "published-time": "2026-11-24T19:01:18+00:00"
         },
         {
             "name": "craftcms/cms",
